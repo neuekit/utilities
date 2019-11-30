@@ -1,0 +1,29 @@
+{
+  "name": "@neuekit/utilities",
+  "version": "1.0.0",
+  "description": "Tree-shakeable JavaScript utilities, add yours today!",
+  "main": "index.js",
+  "scripts": {
+    "prettier": "prettier --config --write ./src/**/*.js",
+    "watch": "onchange './src/**/*.js' -- npm run prettier",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/neuekit/utilities.git"
+  },
+  "author": "Matt Pilott",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/neuekit/utilities/issues"
+  },
+  "homepage": "https://github.com/neuekit/utilities#readme",
+  "devDependencies": {
+    "cypress": "^3.7.0",
+    "prettier": "^1.19.1"
+  },
+  "dependencies": {
+    "dayjs": "^1.8.17",
+    "qss": "^2.0.3"
+  }
+}
