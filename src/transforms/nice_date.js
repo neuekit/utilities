@@ -1,5 +1,4 @@
-import dayjs from 'dayjs';
-import advancedFormat from 'dayjs/plugin/advancedFormat';
+import dayjs from './dayjs';
 
 export default function(time, format = 'DD MMMM YYYY') {
    dayjs.extend(advancedFormat);
