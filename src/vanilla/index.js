@@ -7,11 +7,6 @@ import niceDate from './niceDate';
 import niceTime from './niceTime';
 import titleCase from './titleCase';
 
-/**
- * Vanilla modules
- * @namespace Vanilla
- */
-
 export default {
    copy,
    getIndex,

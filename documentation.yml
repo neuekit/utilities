@@ -1,0 +1,11 @@
+toc:
+   - name: Introduction
+     file: docs/introduction.md
+   - name: Integrations
+     file: docs/Integrations.md
+   - name: Svelte
+     file: docs/svelte.md
+   - name: Vanilla
+     file: docs/vanilla.md
+   - name: WordPress
+     file: docs/wordpress.md
