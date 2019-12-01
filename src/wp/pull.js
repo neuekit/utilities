@@ -3,6 +3,7 @@ import query from 'qss';
 /**
  * Handy sapper fetch wrapper
  * @memberof WordPress
+ * @version 1.0.0
  * @param {string} endpoint api url
  * @param {object} [params={}] object to convert to query string
  * @param {boolean} [preload=false] instruction to use sappers preload fetch

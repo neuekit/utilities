@@ -1,6 +1,7 @@
 /**
  * Shortcut to wp:featuredmedia
  * @memberof WordPress
+ * @version 1.0.0
  * @param {object} data the post/page object
  * @param {string} [size='full'] the wp image size
  * @returns {string} featured image url

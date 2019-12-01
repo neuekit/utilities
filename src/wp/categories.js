@@ -1,6 +1,7 @@
 /**
  * Shortcut to wp:term
  * @memberof WordPress
+ * @version 1.0.0
  * @param {object} data the post/page object
  * @returns {object} term object
  */

@@ -1,6 +1,7 @@
 /**
  * Initialises a minimal Google Analytics script to track traffic
  * @memberof Dom
+ * @version 1.0.0
  * @param {string} gaID the Google Analytics id eg. UA-123456789-1
  */
 

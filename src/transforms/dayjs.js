@@ -6,6 +6,7 @@ dayjs.extend(advancedFormat);
 /**
  * Initialises the dayjs plugin, with advancedFormat enabled
  * @memberof Transforms
+ * @version 1.0.0
  * @returns {object} dayjs instance
  */
 

@@ -1,6 +1,7 @@
 /**
  * Copies text to the users' clipboard
  * @memberof Transforms
+ * @version 1.0.0
  * @param {string} text the string to be copied
  */
 
