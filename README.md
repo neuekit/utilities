@@ -14,3 +14,5 @@ Each module is a sinlge exported function, please continue this way as it makes 
 The aim with this approach is to have small files that do one thing well.
 
 #### Open to contributions, ideas and feedback, oh plus bugs of course 🤓
+
+[Documentation available here](https://neuekit.github.io/utilities/index.html)
