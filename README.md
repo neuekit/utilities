@@ -1,4 +1,5 @@
-# Neue Kit Utilities
+![Hero](https://github.com/neuekit/utilities/hero.png)
+
 Tree-shakeable JavaScript utilities, add yours today! 🧑‍💻
 
 ## Hello 👋,
