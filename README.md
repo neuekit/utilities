@@ -1,6 +1,9 @@
 ![Hero](https://github.com/neuekit/utilities/raw/master/hero.png)
 
+<p align="center">
 Tree-shakeable JavaScript utilities, add yours today! 🧑‍💻
+</p>
+
 
 ## Hello 👋,
 
