@@ -1,9 +1,13 @@
 import copy from './copy';
-import htmlDecode from './html_decode';
-import htmlStr from './html_str';
-import niceDate from './nice_date';
-import niceTime from './nice_time';
-import titleCase from './title_case';
+import htmlDecode from './htmlDecode';
+import niceDate from './niceDate';
+import niceTime from './niceTime';
+import titleCase from './titleCase';
+
+/**
+ * Transformational modules
+ * @namespace Transforms
+ */
 
 export default {
    copy,

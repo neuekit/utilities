@@ -1,3 +1,6 @@
+/**
+ * @private
+ */
 const observer = new IntersectionObserver(
    items => {
       for (let item of items) {
@@ -15,6 +18,12 @@ const observer = new IntersectionObserver(
    { rootMargin: '200px 0px' }
 );
 
+/**
+ * Constructs an IntersectionObserver based, lazy load function for svelte
+ * @memberof Dom
+ * @param {object} node the element to be observed/lazy loaded
+ * @returns {object} containing svelte action methods, update and destroy
+ */
 export default function(node) {
    if (observer) {
       observer.observe(node);

@@ -1,5 +1,10 @@
-import getIndex from './get_index';
-import getObject from './get_object';
+/**
+ * Data modules
+ * @namespace Data
+ */
+
+import getIndex from './getIndex';
+import getObject from './getObject';
 
 export default {
    getIndex,

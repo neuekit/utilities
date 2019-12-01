@@ -1,3 +1,9 @@
+/**
+ * Copies text to the users' clipboard
+ * @memberof Transforms
+ * @param {string} text the string to be copied
+ */
+
 export default function(text) {
    let textArea = document.createElement('textArea');
 

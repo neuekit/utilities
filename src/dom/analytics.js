@@ -1,3 +1,9 @@
+/**
+ * Initialises a minimal Google Analytics script to track traffic
+ * @memberof Dom
+ * @param {string} gaID the Google Analytics id eg. UA-123456789-1
+ */
+
 export default function(gaID) {
    (function(i, s, o, g, r, a, m) {
       i['GoogleAnalyticsObject'] = r;

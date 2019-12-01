@@ -1,3 +1,11 @@
+/**
+ * Shortcut to wp:featuredmedia
+ * @memberof WordPress
+ * @param {object} data the post/page object
+ * @param {string} [size='full'] the wp image size
+ * @returns {string} featured image url
+ */
+
 export default function(data, size = 'full') {
    if (
       data._embedded &&
