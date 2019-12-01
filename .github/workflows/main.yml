@@ -6,6 +6,9 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v1
-
+      
+      - name: Dependencies
+        run: npm ci
+      
       - name: Cypress.io
         uses: cypress-io/github-action@v1.16.1
