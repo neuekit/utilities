@@ -6,7 +6,7 @@
   "scripts": {
     "cypress": "cypress open",
     "prettier": "prettier --config --write ./src/**/*.js",
-    "documentation": "documentation build ./src/** -f html -o docs",
+    "documentation": "documentation build ./src/** -f md -o docs/index.md",
     "watch:prettier": "onchange './src/**/*.js' -- npm run prettier",
     "watch:documentation": "onchange './src/**/*.js' -- npm run documentation",
     "watch": "run-p 'watch:prettier' 'watch:documentation'",
