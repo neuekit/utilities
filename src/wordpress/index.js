@@ -2,7 +2,6 @@ import author from './author';
 import block from './block';
 import categories from './categories';
 import categoryUrl from './categoryUrl';
-import pull from './pull';
 import mediaUrl from './mediaUrl';
 
 /**
@@ -15,6 +14,5 @@ export default {
    block,
    categories,
    categoryUrl,
-   pull,
    mediaUrl
 };

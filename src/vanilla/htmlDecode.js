@@ -1,6 +1,6 @@
 /**
  * Decodes a numeric html entity such as &#74;
- * @memberof Transforms
+ * @memberof Vanilla
  * @version 1.0.0
  * @param {string} str the string to be decoded
  * @returns {string} plain text string

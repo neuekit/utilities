@@ -1,6 +1,6 @@
 /**
  * Creates a nice formatted time from n integer of minutes
- * @memberof Transforms
+ * @memberof Vanilla
  * @version 1.0.0
  * @param {number} mins minutes integer
  * @returns {string} nicely formatted time string eg. 7h 14m

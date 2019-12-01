@@ -1,6 +1,6 @@
 /**
  * Takes a string and converts it to Title case
- * @memberof Transforms
+ * @memberof Vanilla
  * @version 1.0.0
  * @param {string} str string to convert
  * @returns {string} converted string

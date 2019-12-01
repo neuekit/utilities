@@ -1,9 +1,11 @@
-import dom from './dom';
-import wp from './wp';
+import integrations from './integrations';
+import svelte from './svelte';
+import vanilla from './vanilla';
+import wordpress from './wordpress';
 
 export default {
-   data,
-   dom,
-   transforms,
-   wp
+   integrations,
+   svelte,
+   vanilla,
+   wordpress
 }

@@ -1,8 +1,8 @@
-import dayjs from './dayjs';
+import dayjs from '../integrations/dayjs';
 
 /**
  * Creates a nice formatted date from a unix timestamp
- * @memberof Transforms
+ * @memberof Vanilla
  * @version 1.0.0
  * @param {number} time unix timestamp
  * @param {string} [format='DD MMMM YYYY'] dayjs format

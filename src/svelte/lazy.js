@@ -20,7 +20,7 @@ const observer = new IntersectionObserver(
 
 /**
  * Constructs an IntersectionObserver based, lazy load function for svelte
- * @memberof Dom
+ * @memberof Svelte
  * @version 1.0.0
  * @param {object} node the element to be observed/lazy loaded
  * @returns {object} containing svelte action methods, update and destroy

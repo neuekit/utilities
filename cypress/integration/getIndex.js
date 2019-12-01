@@ -1,4 +1,4 @@
-import getIndex from '../../src/data/getIndex';
+import getIndex from '../../src/vanilla/getIndex';
 
 describe('Modules', function(){
 

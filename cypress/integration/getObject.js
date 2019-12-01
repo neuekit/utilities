@@ -1,4 +1,4 @@
-import getObject from '../../src/data/getObject';
+import getObject from '../../src/vanilla/getObject';
 
 describe('Modules', function(){
 
