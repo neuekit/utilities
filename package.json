@@ -4,6 +4,7 @@
   "description": "Tree-shakeable JavaScript utilities, add yours today!",
   "main": "index.js",
   "scripts": {
+    "cypress": "cypress open",
     "prettier": "prettier --config --write ./src/**/*.js",
     "documentation": "documentation build ./src/** -f html -o docs",
     "watch:prettier": "onchange './src/**/*.js' -- npm run prettier",
