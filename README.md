@@ -1,11 +1,12 @@
 ![Hero](https://github.com/neuekit/utilities/raw/master/hero.png)
 
 <p align="center">
-Tree-shakeable JavaScript utilities, add yours today! 🧑‍💻
+  Tree-shakeable JavaScript utilities, add yours today! 🧑‍💻
 </p>
 
-
 ## Hello 👋,
+
+![GitHub release](https://img.shields.io/github/release/neuekit/utilities.svg?style=for-the-badge)
 
 The purpose of this repo is to create a single point of access for all those little helpers, tools and utilities that you have on all your projects.
 
