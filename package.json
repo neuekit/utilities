@@ -1,27 +1,21 @@
 {
   "name": "@neuekit/utilities",
   "version": "1.0.0",
+  "license": "MIT",
   "description": "Tree-shakeable JavaScript utilities, add yours today!",
   "main": "index.js",
-  "scripts": {
-    "cypress": "cypress open",
-    "prettier": "prettier --config --write ./src/**/*.js",
-    "documentation": "documentation build ./src/** -f md -o docs/index.md",
-    "watch:prettier": "onchange './src/**/*.js' -- npm run prettier",
-    "watch:documentation": "onchange './src/**/*.js' -- npm run documentation",
-    "watch": "run-p 'watch:prettier' 'watch:documentation'",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/neuekit/utilities.git"
   },
-  "author": "Matt Pilott",
-  "license": "MIT",
+  "author": "Matt Pilott && Darby Manning",
   "bugs": {
     "url": "https://github.com/neuekit/utilities/issues"
   },
   "homepage": "https://github.com/neuekit/utilities#readme",
+  "publishConfig": {
+    "access": "public"
+  },
   "devDependencies": {
     "cypress": "^3.7.0",
     "documentation": "^12.1.4",
@@ -32,5 +26,14 @@
   "dependencies": {
     "dayjs": "^1.8.17",
     "qss": "^2.0.3"
+  },
+  "scripts": {
+    "cypress": "cypress open",
+    "prettier": "prettier --config --write ./src/**/*.js",
+    "documentation": "documentation build ./src/** -f md -o docs/index.md",
+    "watch:prettier": "onchange './src/**/*.js' -- npm run prettier",
+    "watch:documentation": "onchange './src/**/*.js' -- npm run documentation",
+    "watch": "run-p 'watch:prettier' 'watch:documentation'",
+    "test": "echo \"Error: no test specified\" && exit 1"
   }
 }
