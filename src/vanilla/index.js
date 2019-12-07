@@ -3,6 +3,7 @@ import getIndex from './getIndex';
 import getObject from './getObject';
 import hex from './hex';
 import htmlDecode from './htmlDecode';
+import leadZero from './leadZero';
 import niceDate from './niceDate';
 import niceTime from './niceTime';
 import titleCase from './titleCase';
@@ -19,6 +20,7 @@ export default {
    hex,
    htmlDecode,
    htmlStr,
+   leadZero,
    niceDate,
    niceTime,
    titleCase
