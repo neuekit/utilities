@@ -1,4 +1,4 @@
-import query from 'qss';
+import { encode } from 'qss';
 
 /**
  * Handy sapper fetch wrapper
@@ -17,7 +17,7 @@ export default async function(
    preload = false,
    callback
 ) {
-   const args = Object.keys(params).length ? '?' + query.encode(params) : '';
+   const args = Object.keys(params).length ? '?' + encode(params) : '';
    const url = _endpoint + args;
 
    const req = await (preload ? preload.fetch(url) : fetch(url));
