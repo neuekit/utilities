@@ -1,7 +1,7 @@
 /**
  * @private
  */
-const observer = new IntersectionObserver(
+const observer = process.browser && new IntersectionObserver(
    items => {
       for (let item of items) {
          if (item.isIntersecting) {

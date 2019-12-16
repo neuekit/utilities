@@ -3,7 +3,7 @@ import svelte from './svelte';
 import vanilla from './vanilla';
 import wordpress from './wordpress';
 
-export default {
+export {
    integrations,
    svelte,
    vanilla,

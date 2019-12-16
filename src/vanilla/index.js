@@ -19,7 +19,6 @@ export default {
    getObject,
    hex,
    htmlDecode,
-   htmlStr,
    leadZero,
    niceDate,
    niceTime,
