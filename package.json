@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "license": "MIT",
   "description": "Tree-shakeable JavaScript utilities, add yours today!",
-  "main": "index.js",
+  "main": "src/index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/neuekit/utilities.git"
