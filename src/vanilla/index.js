@@ -13,7 +13,7 @@ import titleCase from './titleCase';
  * @namespace Vanilla
  */
 
-export default {
+export {
    copy,
    getIndex,
    getObject,

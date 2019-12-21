@@ -6,7 +6,7 @@ import pull from './pull';
  * @namespace Svelte
  */
 
-export default {
+export {
    lazy,
    pull
 };

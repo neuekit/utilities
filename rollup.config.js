@@ -7,7 +7,7 @@ export default [
    {
       input: './testing/index.js',
       output: {
-         file: './dist/neuekit.js',
+         file: './testing/bundle.js',
          format: 'iife',
          name: 'NeueKit'
       },
@@ -23,7 +23,8 @@ export default [
             ]]
          }),
          commonjs(),
-         resolve()
+         resolve(),
+         terser()
       ]
    }
 ];

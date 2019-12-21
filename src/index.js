@@ -1,7 +1,7 @@
-import integrations from './integrations';
-import svelte from './svelte';
-import vanilla from './vanilla';
-import wordpress from './wordpress';
+import * as integrations from './integrations';
+import * as svelte from './svelte';
+import * as vanilla from './vanilla';
+import * as wordpress from './wordpress';
 
 export {
    integrations,

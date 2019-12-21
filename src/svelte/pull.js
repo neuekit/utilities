@@ -18,7 +18,7 @@ export default async function(
    callback
 ) {
    const args = Object.keys(params).length ? '?' + encode(params) : '';
-   const url = _endpoint + args;
+   const url = endpoint + args;
 
    const req = await (preload ? preload.fetch(url) : fetch(url));
 

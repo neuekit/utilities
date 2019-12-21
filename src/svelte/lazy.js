@@ -1,7 +1,7 @@
 /**
  * @private
  */
-const observer = process.browser && new IntersectionObserver(
+const observer = /* @__PURE__ */ new IntersectionObserver(
    items => {
       for (let item of items) {
          if (item.isIntersecting) {
@@ -26,17 +26,17 @@ const observer = process.browser && new IntersectionObserver(
  * @returns {object} containing svelte action methods, update and destroy
  */
 export default function(node) {
-   if (observer) {
-      observer.observe(node);
-      return {
-         update() {
-            observer.unobserve(node);
-            node.classList.remove('is-ready');
-            setTimeout(() => observer.observe(node), 200);
-         },
-         destroy() {
-            observer.unobserve(node);
-         }
-      };
-   }
+   if (!(process.browser && observer)) return;
+
+   observer.observe(node);
+   return {
+      update() {
+         observer.unobserve(node);
+         node.classList.remove('is-ready');
+         setTimeout(() => observer.observe(node), 200);
+      },
+      destroy() {
+         observer.unobserve(node);
+      }
+   };
 }

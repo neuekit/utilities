@@ -1,3 +1,3 @@
-import { svelte } from '../src/index.js';
+import { integrations } from '../src/index.js';
 
-console.log(svelte)
+console.log()
