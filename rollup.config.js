@@ -13,20 +13,10 @@ const plugins = [
       presets: [[ '@babel/env' ]]
    }),
    commonjs(),
-   resolve(),
-   terser()
+   resolve()
 ];
 
 export default [
-   {
-      input: './src/index.js',
-      output: {
-         file: './dist/index.js',
-         format: 'esm',
-         name: 'NeueKit'
-      },
-      plugins
-   },
    {
       input: './testing/index.js',
       output: {
