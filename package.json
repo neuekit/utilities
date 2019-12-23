@@ -1,8 +1,9 @@
 {
   "name": "@neuekit/utilities",
-  "version": "1.0.8",
+  "version": "1.0.10",
   "license": "MIT",
   "description": "Tree-shakeable JavaScript utilities, add yours today!",
+  "main": "src/index.js",
   "module": "src/index.js",
   "repository": {
     "type": "git",
