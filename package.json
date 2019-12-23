@@ -1,6 +1,6 @@
 {
   "name": "@neuekit/utilities",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "license": "MIT",
   "description": "Tree-shakeable JavaScript utilities, add yours today!",
   "main": "src/index.js",
@@ -16,10 +16,12 @@
   "publishConfig": {
     "access": "public"
   },
+  "dependencies": {
+    "dayjs": "^1.8.17",
+    "qss": "^2.0.3"
+  },
   "devDependencies": {
     "cypress": "^3.8.0",
-    "dayjs": "^1.8.17",
-    "qss": "^2.0.3",
     "documentation": "^12.1.4",
     "npm-run-all": "^4.1.5",
     "onchange": "^6.1.0",
