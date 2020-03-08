@@ -4,6 +4,7 @@ import getObject from './getObject';
 import hex from './hex';
 import htmlDecode from './htmlDecode';
 import leadZero from './leadZero';
+import netCheck from './netCheck';
 import niceDate from './niceDate';
 import niceTime from './niceTime';
 import titleCase from './titleCase';
@@ -20,6 +21,7 @@ export {
    hex,
    htmlDecode,
    leadZero,
+   netCheck,
    niceDate,
    niceTime,
    titleCase

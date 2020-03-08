@@ -6,7 +6,4 @@ import dayjs from './dayjs';
  * @namespace Integrations
  */
 
-export {
-   analytics,
-   dayjs
-};
+export { analytics, dayjs };

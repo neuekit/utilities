@@ -9,10 +9,4 @@ import mediaUrl from './mediaUrl';
  * @namespace WordPress
  */
 
-export {
-   author,
-   block,
-   categories,
-   categoryUrl,
-   mediaUrl
-};
+export { author, block, categories, categoryUrl, mediaUrl };
