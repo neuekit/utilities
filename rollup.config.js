@@ -26,21 +26,14 @@ const plugins = [
 
 export default [
    {
-      input: './src/index.js',
-      output: {
-         file: './dist/bundle.js',
-         format: 'umd',
-         name: 'NeueKit'
-      },
-      plugins
-   },
-   {
       input: './testing/index.js',
       output: {
          file: './testing/bundle.js',
          format: 'iife',
-         name: 'NeueKit'
+         name: 'NeueKit',
+         globals: { 'svelte/store': 'sveltestore' }
       },
-      plugins
+      plugins,
+      external: [ 'svelte/store' ]
    }
 ];
