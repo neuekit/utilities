@@ -1,5 +1,6 @@
 import lazy from './lazy';
 import pull from './pull';
+import push from './push';
 import storable from './storable';
 
 /**
@@ -7,4 +8,4 @@ import storable from './storable';
  * @namespace Svelte
  */
 
-export { lazy, pull, storable };
+export { lazy, pull, push, storable };
