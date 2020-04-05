@@ -3,11 +3,11 @@ import { encode } from 'qss';
 /**
  * Handy sapper fetch wrapper
  * @memberof Svelte
- * @version 1.0.0
+ * @version 1.1.0
  * @param {string} endpoint api url
  * @param {object} [params={}] object to convert to query string
  * @param {boolean} [preload=false] instruction to use sappers preload fetch
- * @param {function} callback a callback function to be run post fetch
+ * @param {boolean} api toggle to opt out of the prepended API_URL env var
  * @returns {object} fetch data in json format
  */
 
@@ -15,17 +15,11 @@ export default async function (
    endpoint,
    params = {},
    preload = false,
-   callback
+   api = true
 ) {
-   const args = Object.keys(params).length ? '?' + encode(params) : '';
-   const url = process.env.API_URL
-      ? process.env.API_URL + endpoint + args
-      : endpoint + args;
-
+   const base = (api && process.env.API_URL) || '';
+   const url = base + endpoint + encode(params, '?');
    const req = await (preload ? preload.fetch(url) : fetch(url));
-
-   callback && callback(req);
-
    const res = await req.json();
 
    return res;
