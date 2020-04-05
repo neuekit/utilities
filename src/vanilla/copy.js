@@ -5,7 +5,7 @@
  * @param {string} text the string to be copied
  */
 
-export default function(text) {
+export default function (text) {
    let textArea = document.createElement('textArea');
 
    textArea.setAttribute('type', 'hidden');

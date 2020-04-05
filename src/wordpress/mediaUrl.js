@@ -7,7 +7,7 @@
  * @returns {string} featured image url
  */
 
-export default function(data, size = 'full') {
+export default function (data, size = 'full') {
    if (
       data._embedded &&
       data._embedded['wp:featuredmedia'] &&

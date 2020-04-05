@@ -11,7 +11,7 @@ import { encode } from 'qss';
  * @returns {object} fetch data in json format
  */
 
-export default async function(
+export default async function (
    endpoint,
    params = {},
    preload = false,

@@ -7,6 +7,6 @@
  * @returns {string} 6 character hex string
  */
 
-export default function(number, zeros = 0) {
+export default function (number, zeros = 0) {
    return `${number + parseInt('1'.padEnd(2 + zeros, '0'))}`.substring(1);
 }

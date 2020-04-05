@@ -8,6 +8,6 @@
  * @returns {number} the object that matches the criteria, undefined otherwise
  */
 
-export default function(arr, key, value) {
-   return arr.find(v => v[key] === value);
+export default function (arr, key, value) {
+   return arr.find((v) => v[key] === value);
 }

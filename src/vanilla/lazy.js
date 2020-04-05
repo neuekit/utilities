@@ -19,14 +19,14 @@ const observer = /* @__PURE__ */ new IntersectionObserver(
 );
 
 /**
- * Constructs an IntersectionObserver based, lazy load function for svelte
- * @memberof Svelte
+ * Constructs an IntersectionObserver based, image lazy load function
+ * @memberof Vanilla
  * @version 1.0.0
  * @param {object} node the element to be observed/lazy loaded
- * @returns {object} containing svelte action methods, update and destroy
+ * @returns {object} containing methods, update and destroy
  */
 export default function (node) {
-   if (!(process.browser && observer)) return;
+   if (!(typeof window !== 'undefined' && observer)) return;
 
    observer.observe(node);
    return {

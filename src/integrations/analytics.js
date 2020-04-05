@@ -5,12 +5,12 @@
  * @param {string} gaID the Google Analytics id eg. UA-123456789-1
  */
 
-export default function(gaID) {
-   (function(i, s, o, g, r, a, m) {
+export default function (gaID) {
+   (function (i, s, o, g, r, a, m) {
       i['GoogleAnalyticsObject'] = r;
       (i[r] =
          i[r] ||
-         function() {
+         function () {
             (i[r].q = i[r].q || []).push(arguments);
          }),
          (i[r].l = 1 * new Date());

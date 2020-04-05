@@ -5,13 +5,13 @@
  * @returns {number} Filesize in bytes
  */
 
-export default async function(size = 100000) {
+export default async function (size = 100000) {
    //url we will download file from with the above size
    const url = 'https://eu.httpbin.org/stream-bytes/';
    //Capture the start time in miliseconds
    const startTime = Date.now() | 0;
    //Download the file
-   await fetch(url + size).then(r => r.blob());
+   await fetch(url + size).then((r) => r.blob());
    //Capture the end time in miliseconds
    const endTime = Date.now() | 0;
    //Get the difference in times to see how long the download took and convert it to seconds

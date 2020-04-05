@@ -4,7 +4,7 @@ import advancedFormat from 'dayjs/esm/plugin/advancedFormat';
 /**
  * Initialises the dayjs plugin, with advancedFormat enabled
  * @memberof Integrations
- * @version 1.0.0
+ * @version 1.0.1
  * @returns {object} dayjs instance
  */
 
@@ -12,4 +12,8 @@ import advancedFormat from 'dayjs/esm/plugin/advancedFormat';
  * Wrapped in callback function to avoid invoking when read/imported
  * e.g. export default dayjs.extend(advancedFormat); <- Is not tree shakeable
  */
-export default () => dayjs.extend(advancedFormat);
+export default function (...args) {
+   dayjs.extend(advancedFormat);
+
+   return dayjs(...args);
+}

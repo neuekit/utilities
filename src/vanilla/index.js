@@ -24,5 +24,5 @@ export {
    netCheck,
    niceDate,
    niceTime,
-   titleCase
+   titleCase,
 };

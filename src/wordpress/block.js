@@ -6,11 +6,11 @@
  * @returns {string} the component name for use in <svelte:component>
  */
 
-export default function(block) {
+export default function (block) {
    block = (block || '')
       .replace(/(lazyblock\/|core\/)/g, '')
       .toLowerCase()
-      .replace(/(\b|-)\w/g, m => m.toUpperCase().replace(/-/, ''));
+      .replace(/(\b|-)\w/g, (m) => m.toUpperCase().replace(/-/, ''));
 
    return block;
 }

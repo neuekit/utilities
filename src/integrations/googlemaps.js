@@ -9,14 +9,14 @@ let googleMapsScriptIsInjected = false;
  * @version 1.0.0
  * @param {object} options the Google Maps Api params
  */
-export default function(options = {}) {
+export default function (options = {}) {
    if (googleMapsScriptIsInjected) {
       window[options.callback]();
       return;
    }
 
    const optionsQuery = Object.keys(options)
-      .map(k => `${encodeURIComponent(k)}=${encodeURIComponent(options[k])}`)
+      .map((k) => `${encodeURIComponent(k)}=${encodeURIComponent(options[k])}`)
       .join('&');
 
    const url = `https://maps.googleapis.com/maps/api/js?${optionsQuery}`;

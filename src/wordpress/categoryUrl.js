@@ -7,7 +7,7 @@
  * @returns {string} the relative category url
  */
 
-export default function(data, url) {
+export default function (data, url) {
    if (data) {
       return data.link.replace(url, '');
    }

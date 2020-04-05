@@ -6,8 +6,8 @@
  * @returns {string} plain text string
  */
 
-export default function(str) {
-   return str.replace(/&#(\d+);/g, function(match, dec) {
+export default function (str) {
+   return str.replace(/&#(\d+);/g, function (match, dec) {
       return String.fromCharCode(dec);
    });
 }

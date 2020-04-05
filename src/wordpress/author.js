@@ -6,7 +6,7 @@
  * @returns {object} the author of the post
  */
 
-export default function(data) {
+export default function (data) {
    if (data['author']) {
       return data['author'][0];
    }

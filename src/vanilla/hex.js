@@ -5,8 +5,6 @@
  * @returns {string} 6 character hex string
  */
 
-export default function() {
-   return Math.random()
-      .toString(36)
-      .substring(7);
+export default function () {
+   return Math.random().toString(36).substring(7);
 }
