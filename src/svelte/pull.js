@@ -14,7 +14,8 @@ import { encode } from 'qss';
 export default async function (
    endpoint,
    params = {},
-   preload = false
+   preload = false,
+   api = true
 ) {
    const base = (api && process && process.env && process.env.API_URL) || '';
    const url = base + endpoint + encode(params, '?');
