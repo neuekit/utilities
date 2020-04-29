@@ -1,3 +1,3 @@
-import { niceDate } from '../src/vanilla/index.js';
+import { pull } from '../src/svelte/index.js';
 
-console.log(niceDate('2020-03-27T12:33:10'))
+console.log(pull)
