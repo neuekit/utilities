@@ -8,7 +8,7 @@
 
 export default function (block) {
    block = (block || '')
-      .replace(/(lazyblock\/|core\/)/g, '')
+      .split('/')[1]
       .toLowerCase()
       .replace(/(\b|-)\w/g, (m) => m.toUpperCase().replace(/-/, ''));
 
