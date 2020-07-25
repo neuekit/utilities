@@ -154,12 +154,13 @@ Handy sapper fetch wrapper
 -   `params` **[object][56]** object to convert to query string (optional, default `{}`)
 -   `preload` **[boolean][58]** instruction to use sappers preload fetch (optional, default `false`)
 -   `api` **[boolean][58]** toggle to opt out of the prepended API_URL env var (optional, default `true`)
+-   `head` **([array][59] \| [boolean][58])** include headers in return (optional, default `false`)
 
 Returns **[object][56]** fetch data in json format
 
 **Meta**
 
--   **version**: 1.1.2
+-   **version**: 1.2.0
 
 ### push
 
