@@ -1,7 +1,5 @@
-/**
- * @private
- */
-let googleMapsScriptIsInjected = false;
+import createEl from '../vanilla/createEl';
+import { encode } from 'qss';
 
 /**
  * Allows for programmatic insertion of Google Maps script
@@ -10,24 +8,17 @@ let googleMapsScriptIsInjected = false;
  * @param {object} options the Google Maps Api params
  */
 export default function (options = {}) {
-   if (googleMapsScriptIsInjected) {
+   if (document.getElementById('neuekitGoogle')) {
       window[options.callback]();
       return;
    }
-
-   const optionsQuery = Object.keys(options)
-      .map((k) => `${encodeURIComponent(k)}=${encodeURIComponent(options[k])}`)
-      .join('&');
-
-   const url = `https://maps.googleapis.com/maps/api/js?${optionsQuery}`;
-
-   const script = document.createElement('script');
-
-   script.setAttribute('src', url);
-   script.setAttribute('async', '');
-   script.setAttribute('defer', '');
+   
+   const script = createEl('script', {
+      src: 'https://maps.googleapis.com/maps/api/js?' + encode(options),
+      id: 'neuekitGoogle',
+      async: '',
+      defer: ''
+   });
 
    document.head.appendChild(script);
-
-   googleMapsScriptIsInjected = true;
 }

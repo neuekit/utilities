@@ -1,4 +1,5 @@
 import copy from './copy';
+import createEl from './createEl';
 import getIndex from './getIndex';
 import getObject from './getObject';
 import hex from './hex';
@@ -17,6 +18,7 @@ import titleCase from './titleCase';
 
 export {
    copy,
+   createEl,
    getIndex,
    getObject,
    hex,
