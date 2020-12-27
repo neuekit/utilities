@@ -9,6 +9,7 @@ import leadZero from './leadZero';
 import netCheck from './netCheck';
 import niceDate from './niceDate';
 import niceTime from './niceTime';
+import sentenceCase from './sentenceCase';
 import titleCase from './titleCase';
 
 /**
@@ -28,5 +29,6 @@ export {
    netCheck,
    niceDate,
    niceTime,
+   sentenceCase,
    titleCase,
 };
