@@ -1,10 +1,23 @@
 {
   "name": "@neuekit/utilities",
-  "version": "1.8.0",
+  "version": "2.0.0",
   "license": "MIT",
   "description": "Tree-shakeable JavaScript utilities, add yours today!",
-  "main": "dist/bundle.js",
   "module": "src/index.js",
+  "exports": {
+    "./integrations": {
+      "default": "./src/integrations/index.js"
+    },
+    "./middleware": {
+      "default": "./src/middleware/index.js"
+    },
+    "./svelte": {
+      "default": "./src/svelte/index.js"
+    },
+    "./vanilla": {
+      "default": "./src/vanilla/index.js"
+    }
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/neuekit/utilities.git"
@@ -18,27 +31,32 @@
     "access": "public"
   },
   "dependencies": {
-    "dayjs": "^1.9.6",
+    "dayjs": "^1.9.8",
     "qss": "^2.0.3"
   },
   "devDependencies": {
-    "@babel/core": "^7.12.3",
-    "@babel/preset-env": "^7.12.1",
-    "@rollup/plugin-babel": "^5.2.1",
+    "@babel/core": "^7.12.10",
+    "@babel/plugin-transform-runtime": "^7.12.10",
+    "@babel/preset-env": "^7.12.11",
+    "@babel/runtime": "^7.12.5",
+    "@rollup/plugin-babel": "^5.2.2",
     "@rollup/plugin-commonjs": "^17.0.0",
     "@rollup/plugin-node-resolve": "^11.0.1",
     "@rollup/plugin-replace": "^2.3.4",
     "documentation": "^13.1.0",
     "dotenv": "^8.2.0",
+    "esm": "^3.2.25",
     "npm-run-all": "^4.1.5",
     "onchange": "^7.1.0",
-    "prettier": "^2.1.2",
-    "rollup": "^2.33.2",
-    "rollup-plugin-terser": "^7.0.2"
+    "prettier": "^2.2.1",
+    "rollup": "^2.35.1",
+    "rollup-plugin-terser": "^7.0.2",
+    "uvu": "^0.5.1"
   },
   "scripts": {
     "build": "rollup --config",
     "dev": "rollup --config --watch",
+    "test": "uvu -r esm tests",
     "prettier": "prettier --config --write ./src/**/*.js",
     "documentation": "documentation build ./src/** -f md -o docs/index.md",
     "watch:prettier": "onchange './src/**/*.js' -- npm run prettier",
