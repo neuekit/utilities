@@ -8,12 +8,8 @@ import 'dotenv/config';
 const api_url = process.env.API_URL;
 const plugins = [
    babel({
-      exclude: [
-         /\/core-js\//,
-         'dist/**',
-         'node_modules/**',
-         'testing/**'
-      ],
+      babelHelpers: 'bundled',
+      include: [ 'src/**' ],
       presets: [[ '@babel/env' ]]
    }),
    commonjs(),
@@ -26,14 +22,15 @@ const plugins = [
 
 export default [
    {
-      input: './testing/index.js',
+      input: './sandbox/index.js',
       output: {
-         file: './testing/bundle.js',
+         file: './sandbox/bundle.js',
          format: 'iife',
          name: 'NeueKit',
          globals: { 'svelte/store': 'sveltestore' }
       },
       plugins,
-      external: [ 'svelte/store' ]
+      external: [ 'svelte/store' ],
+      treeshake: { moduleSideEffects: false }
    }
 ];

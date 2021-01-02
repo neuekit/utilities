@@ -1,7 +1,7 @@
 /**
  * @private
  */
-const observer = /* @__PURE__ */ new IntersectionObserver(
+const observer = (typeof window !== 'undefined') && /* @__PURE__ */ new IntersectionObserver(
    (items) => {
       for (let item of items) {
          if (item.isIntersecting) {
@@ -26,7 +26,7 @@ const observer = /* @__PURE__ */ new IntersectionObserver(
  * @returns {object} containing methods, update and destroy
  */
 export default function (node) {
-   if (!(typeof window !== 'undefined' && observer)) return;
+   if (typeof window === 'undefined') return;
 
    observer.observe(node);
    return {
