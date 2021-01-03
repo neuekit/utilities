@@ -1,14 +1,15 @@
-name: CI
-on: [push]
+name: UVU CI
+
+on: [push, pull_request]
+
 jobs:
-  cypress-run:
+  uvu-tests:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v1
+      - uses: actions/checkout@v2
       
       - name: Dependencies
         run: npm i
       
-      - name: Cypress.io
-        uses: cypress-io/github-action@v1.16.1
+      - name: Tests
+        run: npm test
