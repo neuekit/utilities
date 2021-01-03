@@ -6,7 +6,7 @@ test('getObject', () => {
    const arr = [{ testA: 1, testB: 2 }, { testA: 3, testB: 4 }]
    
    assert.type(getObject, 'function')
-   assert.is(getObject(arr, 'testA', 3), arr[1])
+   assert.is(getObject(arr, 'testA', 3), arr[2])
 })
 
 test.run()
