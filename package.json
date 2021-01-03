@@ -3,8 +3,23 @@
   "version": "2.0.0",
   "license": "MIT",
   "description": "Tree-shakeable JavaScript utilities, add yours today!",
+  "author": "Matt Pilott && Darby Manning",
+  "homepage": "https://github.com/neuekit/utilities#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/neuekit/utilities.git"
+  },
+  "bugs": {
+    "url": "https://github.com/neuekit/utilities/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
   "module": "src/index.js",
   "exports": {
+    ".": {
+      "default": "./src/index.js"
+    },
     "./integrations": {
       "default": "./src/integrations/index.js"
     },
@@ -18,20 +33,27 @@
       "default": "./src/vanilla/index.js"
     }
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/neuekit/utilities.git"
+  "prettier": {
+    "arrowParens": "avoid",
+    "printWidth": 80,
+    "semi": false,
+    "singleQuote": true,
+    "tabWidth": 3,
+    "trailingComma": "none"
   },
-  "author": "Matt Pilott && Darby Manning",
-  "bugs": {
-    "url": "https://github.com/neuekit/utilities/issues"
-  },
-  "homepage": "https://github.com/neuekit/utilities#readme",
-  "publishConfig": {
-    "access": "public"
+  "scripts": {
+    "build": "rollup --config",
+    "test": "uvu -r esm tests",
+    "prettier": "prettier --config --write ./src/**/*.js --loglevel silent",
+    "documentation": "documentation build ./src/** -f md -o docs/index.md",
+    "watch:rollup": "rollup --config --watch",
+    "watch:prettier": "onchange './src/**/*.js' -- npm run prettier",
+    "watch:documentation": "onchange './src/**/*.js' -- npm run documentation",
+    "watch": "run-p -s 'watch:prettier' 'watch:documentation'",
+    "dev": "run-p -s 'watch:rollup' 'watch:prettier'"
   },
   "dependencies": {
-    "dayjs": "^1.9.8",
+    "dayjs": "^1.10.1",
     "qss": "^2.0.3"
   },
   "devDependencies": {
@@ -52,15 +74,5 @@
     "rollup": "^2.35.1",
     "rollup-plugin-terser": "^7.0.2",
     "uvu": "^0.5.1"
-  },
-  "scripts": {
-    "build": "rollup --config",
-    "dev": "rollup --config --watch",
-    "test": "uvu -r esm tests",
-    "prettier": "prettier --config --write ./src/**/*.js",
-    "documentation": "documentation build ./src/** -f md -o docs/index.md",
-    "watch:prettier": "onchange './src/**/*.js' -- npm run prettier",
-    "watch:documentation": "onchange './src/**/*.js' -- npm run documentation",
-    "watch": "run-p 'watch:prettier' 'watch:documentation'"
   }
 }

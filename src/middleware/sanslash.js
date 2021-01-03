@@ -8,11 +8,11 @@
  */
 export default function (req, res, next) {
    if (req.path.substr(-1) == '/' && req.path.length > 1) {
-      const query = req.url.slice(req.path.length);
-      res.statusCode = 301;
-      res.setHeader('Location', req.path.slice(0, -1) + query);
-      res.end();
+      const query = req.url.slice(req.path.length)
+      res.statusCode = 301
+      res.setHeader('Location', req.path.slice(0, -1) + query)
+      res.end()
    } else {
-      next();
+      next()
    }
 }

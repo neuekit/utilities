@@ -1,4 +1,4 @@
-import { encode } from 'qss';
+import { encode } from 'qss'
 
 /**
  * Handy sapper fetch wrapper
@@ -19,13 +19,13 @@ export default async function (
    api = true,
    head = false
 ) {
-   const base = (api && process.env.API_URL) || '';
-   const url = base + endpoint + encode(params, '?');
-   const res = await (preload ? preload.fetch(url) : fetch(url));
-   const json = await res.json();
+   const base = (api && process.env.API_URL) || ''
+   const url = base + endpoint + encode(params, '?')
+   const res = await (preload ? preload.fetch(url) : fetch(url))
+   const json = await res.json()
    const headers =
       head &&
-      head.reduce((o, key) => ({ ...o, [key]: res.headers.get(key) }), {});
+      head.reduce((o, key) => ({ ...o, [key]: res.headers.get(key) }), {})
 
-   return head ? { headers, json } : json;
+   return head ? { headers, json } : json
 }

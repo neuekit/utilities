@@ -1,11 +1,4 @@
-import * as integrations from './integrations';
-import * as middleware from './middleware';
-import * as svelte from './svelte';
-import * as vanilla from './vanilla';
-
-export {
-   integrations,
-   middleware,
-   svelte,
-   vanilla
-}
+export * from './integrations'
+export * from './middleware'
+export * from './svelte'
+export * from './vanilla'

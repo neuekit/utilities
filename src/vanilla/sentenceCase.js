@@ -7,9 +7,9 @@
  */
 
 export default function (str) {
-   str = str.toLowerCase();
-   str = str.replace(/(\n)|(\f)/g, ' ');
-   str = str.replace(/^.|(\. .)/g, char => char.toUpperCase());
-   
-   return str;
+   str = str.toLowerCase()
+   str = str.replace(/(\n)|(\f)/g, ' ')
+   str = str.replace(/^.|(\. .)/g, char => char.toUpperCase())
+
+   return str
 }

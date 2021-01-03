@@ -1,4 +1,4 @@
-import dayjs from '../integrations/dayjs';
+import dayjs from '../integrations/dayjs'
 
 /**
  * Creates a nice formatted date from a unix timestamp
@@ -10,5 +10,5 @@ import dayjs from '../integrations/dayjs';
  */
 
 export default function (time, format = 'DD MMMM YYYY') {
-   return dayjs(time).format(format);
+   return dayjs(time).format(format)
 }

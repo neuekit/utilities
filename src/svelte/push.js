@@ -1,4 +1,4 @@
-import { encode } from 'qss';
+import { encode } from 'qss'
 
 /**
  * Handy sapper fetch wrapper for post requests
@@ -24,14 +24,14 @@ export default async function (
       body: JSON.stringify(body),
       headers: {
          Accept: 'application/json',
-         'Content-Type': 'application/json',
-      },
-   };
+         'Content-Type': 'application/json'
+      }
+   }
 
-   const base = (api && process.env.API_URL) || '';
-   const url = base + endpoint + encode(params, '?');
-   const req = await (preload ? preload.fetch(url, opts) : fetch(url, opts));
-   const res = await req.json();
+   const base = (api && process.env.API_URL) || ''
+   const url = base + endpoint + encode(params, '?')
+   const req = await (preload ? preload.fetch(url, opts) : fetch(url, opts))
+   const res = await req.json()
 
-   return res;
+   return res
 }
