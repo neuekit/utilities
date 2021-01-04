@@ -1,6 +1,6 @@
 {
   "name": "@neuekit/utilities",
-  "version": "2.0.0",
+  "version": "1.8.0",
   "license": "MIT",
   "description": "Tree-shakeable JavaScript utilities, add yours today!",
   "author": "Matt Pilott && Darby Manning",
@@ -43,6 +43,7 @@
   },
   "scripts": {
     "build": "rollup --config",
+    "release": "release-it",
     "test": "uvu -r esm tests",
     "prettier": "prettier --config --write ./src/**/*.js --loglevel silent",
     "documentation": "documentation build ./src/** -f md -o docs/index.md",
@@ -71,6 +72,7 @@
     "npm-run-all": "^4.1.5",
     "onchange": "^7.1.0",
     "prettier": "^2.2.1",
+    "release-it": "^14.2.2",
     "rollup": "^2.35.1",
     "rollup-plugin-terser": "^7.0.2",
     "uvu": "^0.5.1"
