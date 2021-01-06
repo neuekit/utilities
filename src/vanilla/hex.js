@@ -1,10 +1,19 @@
 /**
- * Creates a random 6 character hex value
+ * Creates a unique id
  * @memberof Vanilla
- * @version 1.0.0
- * @returns {string} 6 character hex string
+ * @version 2.0.0
+ * @param {number} length of id to create
+ * @returns {string} unique id as an alphanumeric string
  */
 
-export default function () {
-   return Math.random().toString(36).substring(7)
+const char = '0123456789abcdefghijklmnopqrstuvwxyz'
+
+export default function (len = 6) {
+   let id = ''
+
+   while (len--) {
+      id += char[(Math.random() * 36) | 0]
+   }
+
+   return id
 }
