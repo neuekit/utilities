@@ -1,4 +1,5 @@
-hero.png
 docs
+hero.png
+rollup.config.js
 sandbox
-tests
+template
