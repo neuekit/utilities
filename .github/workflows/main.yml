@@ -9,8 +9,9 @@ jobs:
       - uses: actions/checkout@v2
       
       - name: Dependencies
-        run: npm i
-        run: npm i -g c8
+        run: |
+          npm i
+          npm i -g c8
         
       - name: Tests & Coverage
         run: c8 --all --include 'src/*/*/index.js' npm test
