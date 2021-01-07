@@ -10,10 +10,12 @@ jobs:
         nodejs: [12, 14, 16]
     steps:
       - uses: actions/checkout@v2
+        with:
+          fetch-depth: 1
       
       - uses: actions/setup-node@v1
-      with:
-        node-version: ${{ matrix.nodejs }}
+        with:
+          node-version: ${{ matrix.nodejs }}
       
       - name: Dependencies
         run: |
