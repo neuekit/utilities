@@ -1,4 +1,4 @@
-name: UVU CI
+name: Test & Coverage CI
 
 on: [push, pull_request]
 
@@ -10,6 +10,14 @@ jobs:
       
       - name: Dependencies
         run: npm i
-      
-      - name: Tests
-        run: npm test
+        run: npm i -g c8
+        
+      - name: Tests & Coverage
+        run: c8 --all --include 'src/*/*/index.js' npm test
+  
+      - name: Report
+        run: |
+          c8 report --reporter=text-lcov > coverage.lcov
+          bash <(curl -s https://codecov.io/bash)
+        env:
+          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
