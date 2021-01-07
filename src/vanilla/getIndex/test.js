@@ -1,7 +1,7 @@
 /* Imports */
 import { test } from 'uvu'
 import * as assert from 'uvu/assert'
-import getIndex from './index'
+import getIndex from './index.js'
 
 /* Setup */
 const arr = [{ testA: 1, testB: 2 }, { testA: 3, testB: 4 }]

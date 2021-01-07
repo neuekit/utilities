@@ -45,7 +45,7 @@
   "scripts": {
     "build": "rollup --config",
     "release": "release-it",
-    "test": "uvu -r esm src test.js -i _template",
+    "test": "uvu src test.js -i _template",
     "prettier": "prettier --config --write ./src/**/*.js --loglevel silent",
     "documentation": "documentation build ./src/** -f md -o docs/index.md",
     "watch:rollup": "rollup --config --watch",

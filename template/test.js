@@ -1,12 +1,16 @@
+/* Imports */
 import { test } from 'uvu'
 import * as assert from 'uvu/assert'
-import getObject from './index'
+import yourModuleName from './index.js'
 
-test('getObject', () => {
-   const arr = [{ testA: 1, testB: 2 }, { testA: 3, testB: 4 }]
-   
-   assert.type(getObject, 'function')
-   assert.is(getObject(arr, 'testA', 3), arr[1])
+/* Setup */
+const data = 'setup data or params'
+
+/* Test */
+test('yourModuleName', () => {
+   assert.type(yourModuleName, 'function')
+   assert.is(yourModuleName(data), true)
 })
 
+/* Result */
 test.run()
