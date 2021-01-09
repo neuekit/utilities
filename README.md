@@ -6,7 +6,17 @@
 
 ## Hello 👋,
 
-![GitHub release](https://img.shields.io/github/release/neuekit/utilities.svg?style=for-the-badge)
+<a href="https://github.com/neuekit/utilities/releases">
+<img src="https://img.shields.io/github/v/release/neuekit/utilities" alt="Releases" />
+</a>
+
+<a href="https://github.com/neuekit/utilities/actions">
+<img src="https://img.shields.io/github/workflow/status/neuekit/utilities/test-coverage-ci" alt="CI" />
+</a>
+
+<a href="https://codecov.io/gh/neuekit/utilities">
+<img src="https://img.shields.io/codecov/c/github/neuekit/utilites" alt="codecov" />
+</a>
 
 The purpose of this repo is to create a single point of access for all those little helpers, tools and utilities that you have on all your projects.
 
