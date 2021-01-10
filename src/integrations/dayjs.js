@@ -1,5 +1,5 @@
-import dayjs from 'dayjs/esm'
-import advancedFormat from 'dayjs/esm/plugin/advancedFormat'
+import dayjs from 'dayjs/esm/index.js'
+import advancedFormat from 'dayjs/esm/plugin/advancedFormat/index.js'
 
 /**
  * Initialises the dayjs plugin, with advancedFormat enabled

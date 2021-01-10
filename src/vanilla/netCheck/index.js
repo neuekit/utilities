@@ -6,15 +6,15 @@
  */
 
 export default async function (size = 100000) {
-   //url we will download file from with the above size
+   // url we will download file from with the above size
    const url = 'https://eu.httpbin.org/stream-bytes/'
-   //Capture the start time in miliseconds
+   // Capture the start time in miliseconds
    const startTime = Date.now() | 0
-   //Download the file
+   // Download the file
    await fetch(url + size).then(r => r.blob())
-   //Capture the end time in miliseconds
+   // Capture the end time in miliseconds
    const endTime = Date.now() | 0
-   //Get the difference in times to see how long the download took and convert it to seconds
+   // Get the difference in times to see how long the download took and convert it to seconds
    const duration = (endTime - startTime) / 1000
    // Multiply the bytes above by 8 to get the bits and divide it by the duration to get the bits per second
    const bps = ((size * 8) / duration) | 0

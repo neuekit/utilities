@@ -1,4 +1,4 @@
-import dayjs from '../../integrations/dayjs'
+import dayjs from '../../integrations/dayjs.js'
 
 /**
  * Creates a nice formatted date from a unix timestamp
