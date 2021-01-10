@@ -55,7 +55,7 @@
     "dev": "run-p -s 'watch:rollup' 'watch:prettier'"
   },
   "dependencies": {
-    "dayjs": "^1.10.2",
+    "dayjs": "^1.10.3",
     "qss": "^2.0.3"
   },
   "devDependencies": {
