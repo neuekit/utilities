@@ -3,6 +3,7 @@
  * @namespace Svelte
  */
 export { default as copy } from './copy'
+export { default as cookie } from './cookie'
 export { default as createEl } from './createEl'
 export { default as getIndex } from './getIndex'
 export { default as getObject } from './getObject'
