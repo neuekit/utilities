@@ -1,4 +1,4 @@
-import { encode } from 'qss'
+import { query } from '../vanilla/index.js'
 
 /**
  * Handy sapper fetch wrapper for post requests
@@ -29,7 +29,7 @@ export default async function (
    }
 
    const base = (api && process.env.API_URL) || ''
-   const url = base + endpoint + encode(params, '?')
+   const url = base + endpoint + query(params, '?')
    const req = await (preload ? preload.fetch(url, opts) : fetch(url, opts))
    const res = await req.json()
 

@@ -1,9 +1,9 @@
-import { encode } from 'qss'
+import { query } from '../vanilla/index.js'
 
 /**
  * Handy sapper fetch wrapper
  * @memberof Svelte
- * @version 1.2.0
+ * @version 1.3.0
  * @param {string} endpoint api url
  * @param {object} [params={}] object to convert to query string
  * @param {boolean} [preload=false] instruction to use sappers preload fetch
@@ -20,7 +20,7 @@ export default async function (
    head = false
 ) {
    const base = (api && process.env.API_URL) || ''
-   const url = base + endpoint + encode(params, '?')
+   const url = base + endpoint + query(params, '?')
    const res = await (preload ? preload.fetch(url) : fetch(url))
    const json = await res.json()
    const headers =

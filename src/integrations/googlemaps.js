@@ -1,5 +1,5 @@
 import createEl from '../vanilla/createEl'
-import { encode } from 'qss'
+import { query } from '../vanilla/index.js'
 
 /**
  * Allows for programmatic insertion of Google Maps script
