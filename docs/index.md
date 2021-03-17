@@ -5,54 +5,63 @@
 -   [Integrations][1]
     -   [analytics][2]
         -   [Parameters][3]
-    -   [dayjs][4]
+    -   [googlemaps][4]
         -   [Parameters][5]
-    -   [googlemaps][6]
-        -   [Parameters][7]
--   [dayjs][8]
-    -   [Parameters][9]
--   [Middleware][10]
-    -   [sanslash][11]
-        -   [Parameters][12]
--   [Svelte][13]
-    -   [pull][14]
+-   [Middleware][6]
+    -   [sanslash][7]
+        -   [Parameters][8]
+-   [Svelte][9]
+    -   [env][10]
+        -   [Parameters][11]
+    -   [pull][12]
+        -   [Parameters][13]
+    -   [push][14]
         -   [Parameters][15]
-    -   [push][16]
+    -   [storable][16]
         -   [Parameters][17]
-    -   [storable][18]
-        -   [Parameters][19]
--   [Svelte][20]
+-   [Svelte][18]
+    -   [env][19]
+        -   [Parameters][20]
     -   [pull][21]
         -   [Parameters][22]
     -   [push][23]
         -   [Parameters][24]
     -   [storable][25]
         -   [Parameters][26]
--   [copy][27]
+-   [index][27]
     -   [Parameters][28]
--   [createEl][29]
+-   [get][29]
     -   [Parameters][30]
--   [getIndex][31]
+-   [set][31]
     -   [Parameters][32]
--   [getObject][33]
+-   [unset][33]
     -   [Parameters][34]
--   [hex][35]
--   [htmlDecode][36]
-    -   [Parameters][37]
--   [lazy][38]
-    -   [Parameters][39]
--   [leadZero][40]
-    -   [Parameters][41]
--   [netCheck][42]
-    -   [Parameters][43]
--   [niceDate][44]
-    -   [Parameters][45]
--   [niceTime][46]
-    -   [Parameters][47]
--   [sentenceCase][48]
-    -   [Parameters][49]
--   [titleCase][50]
-    -   [Parameters][51]
+-   [index][35]
+    -   [Parameters][36]
+-   [index][37]
+    -   [Parameters][38]
+-   [index][39]
+    -   [Parameters][40]
+-   [index][41]
+    -   [Parameters][42]
+-   [index][43]
+    -   [Parameters][44]
+-   [index][45]
+    -   [Parameters][46]
+-   [index][47]
+    -   [Parameters][48]
+-   [index][49]
+    -   [Parameters][50]
+-   [index][51]
+    -   [Parameters][52]
+-   [index][53]
+    -   [Parameters][54]
+-   [index][55]
+    -   [Parameters][56]
+-   [char][57]
+    -   [Parameters][58]
+-   [encode][59]
+    -   [Parameters][60]
 
 ## Integrations
 
@@ -64,25 +73,11 @@ Initialises a minimal Google Analytics script to track traffic
 
 #### Parameters
 
--   `gaID` **[string][52]** the Google Analytics id eg. UA-123456789-1
+-   `gaID` **[string][61]** the Google Analytics id eg. UA-123456789-1
 
 **Meta**
 
 -   **version**: 1.0.0
-
-### dayjs
-
-Initialises the dayjs plugin, with advancedFormat enabled
-
-#### Parameters
-
--   `args` **...any** 
-
-Returns **[object][53]** dayjs instance
-
-**Meta**
-
--   **version**: 1.0.1
 
 ### googlemaps
 
@@ -90,20 +85,11 @@ Allows for programmatic insertion of Google Maps script
 
 #### Parameters
 
--   `options` **[object][53]** the Google Maps Api params (optional, default `{}`)
+-   `options` **[object][62]** the Google Maps Api params (optional, default `{}`)
 
 **Meta**
 
 -   **version**: 1.1.0
-
-## dayjs
-
-Wrapped in callback function to avoid invoking when read/imported
-e.g. export default dayjs.extend(advancedFormat); &lt;- Is not tree shakeable
-
-### Parameters
-
--   `args` **...any** 
 
 ## Middleware
 
@@ -115,9 +101,9 @@ Redirects all urls ending in a trailing slash to non trailing for SEO
 
 #### Parameters
 
--   `req` **[object][53]** request object
--   `res` **[object][53]** response object
--   `next` **[function][54]** next step function
+-   `req` **[object][62]** request object
+-   `res` **[object][62]** response object
+-   `next` **[function][63]** next step function
 
 **Meta**
 
@@ -127,23 +113,37 @@ Redirects all urls ending in a trailing slash to non trailing for SEO
 
 Svelte modules
 
+### env
+
+Svelte/Sapper automatic environment variable array
+
+#### Parameters
+
+-   `prefix` **[string][61]**  (optional, default `'SS_'`)
+
+Returns **[object][62]** environment variables for replacement
+
+**Meta**
+
+-   **version**: 1.0.0
+
 ### pull
 
 Handy sapper fetch wrapper
 
 #### Parameters
 
--   `endpoint` **[string][52]** api url
--   `params` **[object][53]** object to convert to query string (optional, default `{}`)
--   `preload` **[boolean][55]** instruction to use sappers preload fetch (optional, default `false`)
--   `api` **[boolean][55]** toggle to opt out of the prepended API_URL env var (optional, default `true`)
--   `head` **([array][56] \| [boolean][55])** include headers in return (optional, default `false`)
+-   `endpoint` **[string][61]** api url
+-   `params` **[object][62]** object to convert to query string (optional, default `{}`)
+-   `preload` **[boolean][64]** instruction to use sappers preload fetch (optional, default `false`)
+-   `api` **[boolean][64]** toggle to opt out of the prepended API_URL env var (optional, default `true`)
+-   `head` **([array][65] \| [boolean][64])** include headers in return (optional, default `false`)
 
-Returns **[object][53]** fetch data in json format
+Returns **[object][62]** fetch data in json format
 
 **Meta**
 
--   **version**: 1.2.0
+-   **version**: 1.3.0
 
 ### push
 
@@ -151,13 +151,13 @@ Handy sapper fetch wrapper for post requests
 
 #### Parameters
 
--   `endpoint` **[string][52]** api url
--   `body` **[object][53]** object to convert to post body (optional, default `{}`)
--   `params` **[object][53]** object to convert to query string (optional, default `{}`)
--   `preload` **[boolean][55]** instruction to use sappers preload fetch (optional, default `false`)
--   `api` **[boolean][55]** toggle to opt out of the prepended API_URL env var (optional, default `true`)
+-   `endpoint` **[string][61]** api url
+-   `body` **[object][62]** object to convert to post body (optional, default `{}`)
+-   `params` **[object][62]** object to convert to query string (optional, default `{}`)
+-   `preload` **[boolean][64]** instruction to use sappers preload fetch (optional, default `false`)
+-   `api` **[boolean][64]** toggle to opt out of the prepended API_URL env var (optional, default `true`)
 
-Returns **[object][53]** fetch data in json format
+Returns **[object][62]** fetch data in json format
 
 **Meta**
 
@@ -171,7 +171,7 @@ Svelte store which reads/writes values to the users localStorage
 
 -   `data` **any** data to create store with
 
-Returns **[object][53]** store methods
+Returns **[object][62]** store methods
 
 **Meta**
 
@@ -181,23 +181,37 @@ Returns **[object][53]** store methods
 
 Svelte modules
 
+### env
+
+Svelte/Sapper automatic environment variable array
+
+#### Parameters
+
+-   `prefix` **[string][61]**  (optional, default `'SS_'`)
+
+Returns **[object][62]** environment variables for replacement
+
+**Meta**
+
+-   **version**: 1.0.0
+
 ### pull
 
 Handy sapper fetch wrapper
 
 #### Parameters
 
--   `endpoint` **[string][52]** api url
--   `params` **[object][53]** object to convert to query string (optional, default `{}`)
--   `preload` **[boolean][55]** instruction to use sappers preload fetch (optional, default `false`)
--   `api` **[boolean][55]** toggle to opt out of the prepended API_URL env var (optional, default `true`)
--   `head` **([array][56] \| [boolean][55])** include headers in return (optional, default `false`)
+-   `endpoint` **[string][61]** api url
+-   `params` **[object][62]** object to convert to query string (optional, default `{}`)
+-   `preload` **[boolean][64]** instruction to use sappers preload fetch (optional, default `false`)
+-   `api` **[boolean][64]** toggle to opt out of the prepended API_URL env var (optional, default `true`)
+-   `head` **([array][65] \| [boolean][64])** include headers in return (optional, default `false`)
 
-Returns **[object][53]** fetch data in json format
+Returns **[object][62]** fetch data in json format
 
 **Meta**
 
--   **version**: 1.2.0
+-   **version**: 1.3.0
 
 ### push
 
@@ -205,13 +219,13 @@ Handy sapper fetch wrapper for post requests
 
 #### Parameters
 
--   `endpoint` **[string][52]** api url
--   `body` **[object][53]** object to convert to post body (optional, default `{}`)
--   `params` **[object][53]** object to convert to query string (optional, default `{}`)
--   `preload` **[boolean][55]** instruction to use sappers preload fetch (optional, default `false`)
--   `api` **[boolean][55]** toggle to opt out of the prepended API_URL env var (optional, default `true`)
+-   `endpoint` **[string][61]** api url
+-   `body` **[object][62]** object to convert to post body (optional, default `{}`)
+-   `params` **[object][62]** object to convert to query string (optional, default `{}`)
+-   `preload` **[boolean][64]** instruction to use sappers preload fetch (optional, default `false`)
+-   `api` **[boolean][64]** toggle to opt out of the prepended API_URL env var (optional, default `true`)
 
-Returns **[object][53]** fetch data in json format
+Returns **[object][62]** fetch data in json format
 
 **Meta**
 
@@ -225,25 +239,87 @@ Svelte store which reads/writes values to the users localStorage
 
 -   `data` **any** data to create store with
 
-Returns **[object][53]** store methods
+Returns **[object][62]** store methods
 
 **Meta**
 
 -   **version**: 1.0.0
 
-## copy
+## index
+
+Returns a clamped value between two points
+
+### Parameters
+
+-   `start` **[number][66]** bottom end of the range
+-   `end` **[number][66]** top end of the range
+-   `duration` **[number][66]** length of range
+-   `multiplier` **[number][66]** changing value to move between start and end
+-   `decimal` **[number][66]** return result to a float
+
+Returns **[number][66]** Returns the value between start & end
+
+**Meta**
+
+-   **version**: 1.0.0
+
+## get
+
+Get a cookie stored in the browser by name
+
+### Parameters
+
+-   `name`  
+-   `cookie` **[string][61]** name
+
+Returns **[string][61]** Cookie value
+
+**Meta**
+
+-   **version**: 1.0.0
+
+## set
+
+Sets a cookie
+
+### Parameters
+
+-   `name`  
+-   `value`  
+-   `days` **[string][61]** until expiry
+-   `cookie` **[string][61]** name
+-   `cookie` **[string][61]** value
+
+**Meta**
+
+-   **version**: 1.0.0
+
+## unset
+
+Removes a cookie from the browser by name
+
+### Parameters
+
+-   `name`  
+-   `cookie` **[string][61]** name
+
+**Meta**
+
+-   **version**: 1.0.0
+
+## index
 
 Copies text to the users' clipboard
 
 ### Parameters
 
--   `text` **[string][52]** the string to be copied
+-   `text` **[string][61]** the string to be copied
 
 **Meta**
 
 -   **version**: 1.0.0
 
-## createEl
+## index
 
 Creates an element with a given object of attributes
 
@@ -251,101 +327,91 @@ Creates an element with a given object of attributes
 
 -   `tagName`  
 -   `attributes`   (optional, default `{}`)
--   `name` **[string][52]** of the element such as 'div'
--   `key/value` **[object][53]** object of attribute names and values
+-   `name` **[string][61]** of the element such as 'div'
+-   `key/value` **[object][62]** object of attribute names and values
 
-Returns **[node][57]** returns node
+Returns **[node][67]** returns node
 
 **Meta**
 
 -   **version**: 1.0.0
 
-## getIndex
+## index
 
 Finds an object index in an array of objects
 
 ### Parameters
 
--   `arr` **[array][56]** the array of objects to search through
--   `key` **[string][52]** the property key in the object you want to find
--   `value` **[string][52]** the property value in the object you want to find
+-   `arr` **[array][65]** the array of objects to search through
+-   `key` **[string][61]** the property key in the object you want to find
+-   `value` **[string][61]** the property value in the object you want to find
 
-Returns **[number][58]** index of the object that matches the criteria, -1 otherwise
+Returns **[number][66]** index of the object that matches the criteria, -1 otherwise
 
 **Meta**
 
 -   **version**: 1.0.0
 
-## getObject
+## index
 
 Finds an object in an array of objects
 
 ### Parameters
 
--   `arr` **[array][56]** the array of objects to search through
--   `key` **[string][52]** the property key in the object you want to find
--   `value` **[string][52]** the property value in the object you want to find
+-   `arr` **[array][65]** the array of objects to search through
+-   `key` **[string][61]** the property key in the object you want to find
+-   `value` **[string][61]** the property value in the object you want to find
 
-Returns **[number][58]** the object that matches the criteria, undefined otherwise
-
-**Meta**
-
--   **version**: 1.0.0
-
-## hex
-
-Creates a random 6 character hex value
-
-Returns **[string][52]** 6 character hex string
+Returns **[number][66]** the object that matches the criteria, undefined otherwise
 
 **Meta**
 
 -   **version**: 1.0.0
 
-## htmlDecode
+## index
 
 Decodes a numeric html entity such as J
 
 ### Parameters
 
--   `str` **[string][52]** the string to be decoded
+-   `str` **[string][61]** the string to be decoded
 
-Returns **[string][52]** plain text string
+Returns **[string][61]** plain text string
 
 **Meta**
 
 -   **version**: 1.0.0
 
-## lazy
+## index
 
 Constructs an IntersectionObserver based, image lazy load function
 
 ### Parameters
 
--   `node` **[object][53]** the element to be observed/lazy loaded
+-   `node` **[object][62]** the element to be observed/lazy loaded
 
-Returns **[object][53]** containing methods, update and destroy
+Returns **[object][62]** containing methods, update and destroy
 
 **Meta**
 
 -   **version**: 1.0.0
 
-## leadZero
+## index
 
 Adds leading zeros to your number
 
 ### Parameters
 
--   `number` **[number][58]** The number to prefix with zeros
--   `zeros` **[number][58]** The number of zeros to lead by (optional, default `0`)
+-   `number` **[number][66]** The number to prefix with zeros
+-   `zeros` **[number][66]** The number of zeros to lead by (optional, default `0`)
 
-Returns **[string][52]** 6 character hex string
+Returns **[string][61]** number entered preceded by the number of zeroes
 
 **Meta**
 
--   **version**: 1.0.0
+-   **version**: 2.0.0
 
-## netCheck
+## index
 
 Does a rudimentary check of download speed
 
@@ -353,64 +419,85 @@ Does a rudimentary check of download speed
 
 -   `size`   (optional, default `100000`)
 
-Returns **[number][58]** Filesize in bytes
+Returns **[number][66]** Filesize in bytes
 
 **Meta**
 
 -   **version**: 1.0.0
 
-## niceDate
+## index
 
 Creates a nice formatted date from a unix timestamp
 
 ### Parameters
 
--   `time` **[number][58]** unix timestamp
--   `format` **[string][52]** dayjs format (optional, default `'DD MMMM YYYY'`)
+-   `str`  
+-   `date` **([object][62] \| [string][61])** object or string
+-   `string` **[string][61]** containing formats ie. {YYYY}
 
-Returns **[string][52]** 6 character hex string
+Returns **[string][61]** 6 character hex string
 
 **Meta**
 
--   **version**: 1.0.1
+-   **version**: 2.0.0
 
-## niceTime
+## index
 
 Creates a nice formatted time from n integer of minutes
 
 ### Parameters
 
--   `mins` **[number][58]** minutes integer
+-   `mins` **[number][66]** minutes integer
 
-Returns **[string][52]** nicely formatted time string eg. 7h 14m
-
-**Meta**
-
--   **version**: 1.0.0
-
-## sentenceCase
-
-Takes a string and converts it to sentence case
-
-### Parameters
-
--   `str` **[string][52]** string to convert
-
-Returns **[string][52]** converted string
+Returns **[string][61]** nicely formatted time string eg. 7h 14m
 
 **Meta**
 
 -   **version**: 1.0.0
 
-## titleCase
+## index
 
-Takes a string and converts it to Title case
+Takes a string and converts it to sentence or title case
 
 ### Parameters
 
--   `str` **[string][52]** string to convert
+-   `string` **[string][61]** string to convert
+-   `format` **[boolean][64]** enable title case
 
-Returns **[string][52]** converted string
+Returns **[string][61]** converted string
+
+**Meta**
+
+-   **version**: 2.0.0
+
+## char
+
+Creates a unique id
+
+Type: [string][61]
+
+### Parameters
+
+-   `length` **[number][66]** of id to create
+
+Returns **[string][61]** unique id as an alphanumeric string
+
+**Meta**
+
+-   **version**: 2.0.0
+
+## encode
+
+Converts and object to a url query string or vice-versa
+
+### Parameters
+
+-   `obj`  
+-   `pfx`  
+-   `object` **([object][62] \| [string][61])** to encode or string to decode
+-   `prefix` **[string][61]** for encoded string
+
+Returns **([object][62] \| [string][61])** returns encoded string or decoded object
 
 **Meta**
 
@@ -422,39 +509,39 @@ Returns **[string][52]** converted string
 
 [3]: #parameters
 
-[4]: #dayjs
+[4]: #googlemaps
 
 [5]: #parameters-1
 
-[6]: #googlemaps
+[6]: #middleware
 
-[7]: #parameters-2
+[7]: #sanslash
 
-[8]: #dayjs-1
+[8]: #parameters-2
 
-[9]: #parameters-3
+[9]: #svelte
 
-[10]: #middleware
+[10]: #env
 
-[11]: #sanslash
+[11]: #parameters-3
 
-[12]: #parameters-4
+[12]: #pull
 
-[13]: #svelte
+[13]: #parameters-4
 
-[14]: #pull
+[14]: #push
 
 [15]: #parameters-5
 
-[16]: #push
+[16]: #storable
 
 [17]: #parameters-6
 
-[18]: #storable
+[18]: #svelte-1
 
-[19]: #parameters-7
+[19]: #env-1
 
-[20]: #svelte-1
+[20]: #parameters-7
 
 [21]: #pull-1
 
@@ -468,66 +555,84 @@ Returns **[string][52]** converted string
 
 [26]: #parameters-10
 
-[27]: #copy
+[27]: #index
 
 [28]: #parameters-11
 
-[29]: #createel
+[29]: #get
 
 [30]: #parameters-12
 
-[31]: #getindex
+[31]: #set
 
 [32]: #parameters-13
 
-[33]: #getobject
+[33]: #unset
 
 [34]: #parameters-14
 
-[35]: #hex
+[35]: #index-1
 
-[36]: #htmldecode
+[36]: #parameters-15
 
-[37]: #parameters-15
+[37]: #index-2
 
-[38]: #lazy
+[38]: #parameters-16
 
-[39]: #parameters-16
+[39]: #index-3
 
-[40]: #leadzero
+[40]: #parameters-17
 
-[41]: #parameters-17
+[41]: #index-4
 
-[42]: #netcheck
+[42]: #parameters-18
 
-[43]: #parameters-18
+[43]: #index-5
 
-[44]: #nicedate
+[44]: #parameters-19
 
-[45]: #parameters-19
+[45]: #index-6
 
-[46]: #nicetime
+[46]: #parameters-20
 
-[47]: #parameters-20
+[47]: #index-7
 
-[48]: #sentencecase
+[48]: #parameters-21
 
-[49]: #parameters-21
+[49]: #index-8
 
-[50]: #titlecase
+[50]: #parameters-22
 
-[51]: #parameters-22
+[51]: #index-9
 
-[52]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String
+[52]: #parameters-23
 
-[53]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object
+[53]: #index-10
 
-[54]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function
+[54]: #parameters-24
 
-[55]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean
+[55]: #index-11
 
-[56]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array
+[56]: #parameters-25
 
-[57]: https://developer.mozilla.org/docs/Web/API/Node/nextSibling
+[57]: #char
 
-[58]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number
+[58]: #parameters-26
+
+[59]: #encode
+
+[60]: #parameters-27
+
+[61]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String
+
+[62]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object
+
+[63]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function
+
+[64]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean
+
+[65]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array
+
+[66]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number
+
+[67]: https://developer.mozilla.org/docs/Web/API/Node/nextSibling

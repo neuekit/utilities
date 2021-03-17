@@ -2,6 +2,7 @@
  * Svelte modules
  * @namespace Svelte
  */
+export { default as clamp } from './clamp'
 export { default as copy } from './copy'
 export { default as cookie } from './cookie'
 export { default as createEl } from './createEl'
