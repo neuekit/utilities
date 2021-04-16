@@ -5,27 +5,28 @@ import { writable, get } from 'svelte/store'
  * @memberof Svelte
  * @version 1.0.0
  * @param {*} data data to create store with
+ * @param {string} name name of localStorage key
  * @returns {object} store methods
  */
 
-export default function (data) {
+export default function (data, name: 'storable') {
    const store = writable(data)
    const { subscribe, set, update } = store
 
    if (typeof window == 'undefined') return store
 
-   localStorage.storable && set(JSON.parse(localStorage.storable))
+   localStorage[name] && set(JSON.parse(localStorage[name]))
 
    return {
       subscribe,
       set: data => {
-         localStorage.storable = JSON.stringify(data)
+         localStorage[name] = JSON.stringify(data)
          set(data)
       },
       update: callback => {
          const updatedStore = callback(get(store))
 
-         localStorage.storable = JSON.stringify(updatedStore)
+         localStorage[name] = JSON.stringify(updatedStore)
          set(updatedStore)
       }
    }
