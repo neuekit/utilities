@@ -12,6 +12,7 @@ import { writable, get } from 'svelte/store'
 export default function (data, name = 'storable') {
    const store = writable(data)
    const { subscribe, set, update } = store
+   let initial = get(store)
 
    if (typeof window == 'undefined') return store
 
@@ -28,6 +29,10 @@ export default function (data, name = 'storable') {
 
          localStorage[name] = JSON.stringify(updatedStore)
          set(updatedStore)
+      },
+      reset: () => {
+         localStorage.removeItem(name)
+         set(initial)
       }
    }
 }
