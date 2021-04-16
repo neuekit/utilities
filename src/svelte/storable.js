@@ -9,7 +9,7 @@ import { writable, get } from 'svelte/store'
  * @returns {object} store methods
  */
 
-export default function (data, name: 'storable') {
+export default function (data, name = 'storable') {
    const store = writable(data)
    const { subscribe, set, update } = store
 
