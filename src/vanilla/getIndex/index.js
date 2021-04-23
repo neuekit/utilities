@@ -9,5 +9,5 @@
  */
 
 export default function (arr, key, value) {
-   return arr.findIndex(v => v[key] === value)
+   return arr.length && arr.findIndex(v => v[key] === value)
 }
