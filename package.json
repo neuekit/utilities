@@ -1,6 +1,6 @@
 {
   "name": "@neuekit/utils",
-  "version": "2.0.0-alpha.12",
+  "version": "2.0.0-alpha.13",
   "license": "MIT",
   "description": "Tree-shakeable JavaScript utilities, add yours today!",
   "author": "Matt Pilott && Darby Manning",
