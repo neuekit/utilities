@@ -4,3 +4,4 @@ yarn-error.log
 pnpm-lock.yaml
 package-lock.json
 sandbox/bundle.js
+.vscode
