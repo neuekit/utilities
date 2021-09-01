@@ -1,6 +1,6 @@
 /**
- * Svelte modules
- * @namespace Svelte
+ * Vanilla modules
+ * @namespace Vanilla
  */
 export { default as clamp } from './clamp'
 export { default as copy } from './copy'
@@ -16,5 +16,6 @@ export { default as netCheck } from './netCheck'
 export { default as niceDate } from './niceDate'
 export { default as niceTime } from './niceTime'
 export { default as niceType } from './niceType'
+export { default as overscroll } from './overscroll'
 export { default as query } from './query'
 export { default as toBase64 } from './toBase64'
