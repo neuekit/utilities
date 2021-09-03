@@ -6,7 +6,7 @@
  * @returns {function} Fires callback
  */
 
-export default function (callback) {
+export default function (callback, edge = 'bottom') {
    let maxHeight = Math.max(
       document.body.scrollHeight,
       document.documentElement.scrollHeight,
@@ -17,11 +17,15 @@ export default function (callback) {
    )
 
    let scrollHeight = maxHeight - document.documentElement.clientHeight
+   let timer
 
-   window.addEventListener('scroll', () => {
-      // console.log(window.scrollY, scrollHeight)
-      if (window.scrollY > scrollHeight || window.scrollY < 0) {
-         callback()
-      }
+   function run() {
+      clearTimeout(timer)
+      timer = setTimeout(callback, 300)
+   }
+
+   window.addEventListener('wheel', e => {
+      if (edge === 'bottom' && window.scrollY == scrollHeight) run()
+      if (edge === 'top' && window.scrollY < 1) run()
    })
 }
