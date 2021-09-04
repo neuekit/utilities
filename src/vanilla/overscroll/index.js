@@ -18,6 +18,7 @@ export default function (callback, edge = 'bottom') {
 
    let scrollHeight = maxHeight - document.documentElement.clientHeight
    let timer
+   let count = 0
 
    function run() {
       clearTimeout(timer)
@@ -25,7 +26,11 @@ export default function (callback, edge = 'bottom') {
    }
 
    window.addEventListener('wheel', e => {
-      if (edge === 'bottom' && window.scrollY == scrollHeight) run()
-      if (edge === 'top' && window.scrollY < 1) run()
+      e.deltaY > 300 && (count += 1)
+      if (count > 3) {
+         if (edge === 'bottom' && window.scrollY == scrollHeight) run()
+         if (edge === 'top' && window.scrollY < 1) run()
+         count = 0
+      }
    })
 }

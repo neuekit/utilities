@@ -1,6 +1,6 @@
 {
   "name": "@neuekit/utils",
-  "version": "2.0.0-alpha.15",
+  "version": "2.0.0-alpha.16",
   "license": "MIT",
   "description": "Tree-shakeable JavaScript utilities, add yours today!",
   "author": "Matt Pilott && Darby Manning",
@@ -54,10 +54,10 @@
     "dev": "run-p -s 'watch:rollup' 'watch:prettier'"
   },
   "devDependencies": {
-    "@babel/core": "^7.15.0",
+    "@babel/core": "^7.15.5",
     "@babel/plugin-transform-runtime": "^7.15.0",
-    "@babel/preset-env": "^7.15.0",
-    "@babel/runtime": "^7.15.3",
+    "@babel/preset-env": "^7.15.4",
+    "@babel/runtime": "^7.15.4",
     "@rollup/plugin-babel": "^5.3.0",
     "@rollup/plugin-commonjs": "^20.0.0",
     "@rollup/plugin-node-resolve": "^13.0.4",
