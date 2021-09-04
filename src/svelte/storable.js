@@ -1,32 +1,38 @@
-import { writable, get } from 'svelte/store';
+import { writable, get } from 'svelte/store'
 
 /**
  * Svelte store which reads/writes values to the users localStorage
  * @memberof Svelte
  * @version 1.0.0
  * @param {*} data data to create store with
+ * @param {string} name name of localStorage key
  * @returns {object} store methods
  */
 
-export default function (data) {
-   const store = writable(data);
-   const { subscribe, set, update } = store;
+export default function (data, name = 'storable') {
+   const initial = JSON.stringify(data)
+   const store = writable(data)
+   const { subscribe, set, update } = store
 
-   if (typeof window == 'undefined') return store;
+   if (typeof window == 'undefined') return store
 
-   localStorage.storable && set(JSON.parse(localStorage.storable));
+   localStorage[name] && set(JSON.parse(localStorage[name]))
 
    return {
       subscribe,
-      set: (data) => {
-         localStorage.storable = JSON.stringify(data);
-         set(data);
+      set: data => {
+         localStorage[name] = JSON.stringify(data)
+         set(data)
       },
-      update: (callback) => {
-         const updatedStore = callback(get(store));
+      update: callback => {
+         const updatedStore = callback(get(store))
 
-         localStorage.storable = JSON.stringify(updatedStore);
-         set(updatedStore);
+         localStorage[name] = JSON.stringify(updatedStore)
+         set(updatedStore)
       },
-   };
+      reset: () => {
+         localStorage.removeItem(name)
+         set(JSON.parse(initial))
+      }
+   }
 }

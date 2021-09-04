@@ -1,10 +1,6 @@
-import analytics from './analytics';
-import dayjs from './dayjs';
-import googlemaps from './googlemaps';
-
 /**
  * Integration modules
  * @namespace Integrations
  */
-
-export { analytics, dayjs, googlemaps };
+export { default as analytics } from './analytics'
+export { default as googlemaps } from './googlemaps'

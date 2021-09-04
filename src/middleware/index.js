@@ -1,8 +1,5 @@
-import sanslash from './sanslash';
-
 /**
- * Integration modules
+ * Middleware modules
  * @namespace Middleware
  */
-
-export { sanslash };
+export { default as sanslash } from './sanslash'
