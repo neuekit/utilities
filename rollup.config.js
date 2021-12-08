@@ -17,7 +17,10 @@ const plugins = [
       presets: [['@babel/env']]
    }),
    commonjs(),
-   replace({ 'process.env.API_URL': JSON.stringify(api_url) }),
+   replace({
+      'process.env.API_URL': JSON.stringify(api_url),
+      preventAssignment: true
+   }),
    resolve(),
    terser()
 ]
