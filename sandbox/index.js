@@ -2,9 +2,6 @@
 // import { sanslash } from '../src/middleware/index.js'
 // import { pull } from '../src/svelte/index.js'
 // import { cookie } from '../src/index'
-import { overscroll } from '../src/index'
+import { tristate } from '../src/index'
 
-function test() {
-   console.log('hello')
-}
-overscroll(test)
+console.log(tristate(undefined))
