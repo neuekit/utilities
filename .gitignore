@@ -5,3 +5,4 @@ yarn-error.log
 pnpm-lock.yaml
 package-lock.json
 testing/bundle.js
+.vscode
