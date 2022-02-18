@@ -11,7 +11,7 @@ export default function (tagName, attributes = {}) {
    const elem = document.createElement(tagName)
 
    for (const key in attributes) {
-      elem[key] = attributes[key]
+      elem.setAttribute(key, attributes[key])
    }
 
    return elem

@@ -2,21 +2,16 @@
 import { test } from 'uvu'
 import * as assert from 'uvu/assert'
 import createEl from './index.js'
-import * as ENV from '../../puppeteer.js'
+import 'global-jsdom/register'
 
 /* Setup */
-test.before(ENV.setup)
-test.after(ENV.reset)
+const elem = createEl('button', { width: '100px' })
 
 /* Test */
-test('createEl', async ({ page }) => {
-   const result = await page.evaluate(fn => {
-      const func = new Function(`return ${fn}.apply(null, arguments)`)
-      return func('button').tagName
-   }, createEl.toString())
-   
+test('createEl', () => {
    assert.type(createEl, 'function')
-   assert.is(result, 'BUTTON')
+   assert.is(elem.tagName, 'BUTTON')
+   assert.is(elem.getAttribute('width'), '100px')
 })
 
 /* Result */
