@@ -1,5 +1,5 @@
 /**
- * Converts and object to a url query string or vice-versa
+ * Converts an object to a url query string or vice-versa
  * @memberof Vanilla
  * @version 1.0.0
  * @param {object|string} object to encode or string to decode

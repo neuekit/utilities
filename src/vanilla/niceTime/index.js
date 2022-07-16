@@ -1,5 +1,5 @@
 /**
- * Creates a nice formatted time from n integer of minutes
+ * Creates a nice formatted time from an integer of minutes
  * @memberof Vanilla
  * @version 1.0.0
  * @param {number} mins minutes integer
