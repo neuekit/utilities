@@ -1,6 +1,6 @@
 {
   "name": "@neuekit/utilities",
-  "version": "1.8.0",
+  "version": "1.8.1",
   "license": "MIT",
   "description": "Tree-shakeable JavaScript utilities, add yours today!",
   "main": "dist/bundle.js",
@@ -44,5 +44,6 @@
     "watch:prettier": "onchange './src/**/*.js' -- npm run prettier",
     "watch:documentation": "onchange './src/**/*.js' -- npm run documentation",
     "watch": "run-p 'watch:prettier' 'watch:documentation'"
-  }
+  },
+  "type": "module"
 }
