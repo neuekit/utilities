@@ -16,7 +16,7 @@ export default function (options = {}) {
    }
 
    script = createEl('script', {
-      src: 'https://maps.googleapis.com/maps/api/js?' + encode(options),
+      src: 'https://maps.googleapis.com/maps/api/js?' + query(options),
       id: 'neuekitGoogle',
       async: '',
       defer: ''
