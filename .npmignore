@@ -1,9 +1,8 @@
-.prettierignore
+.github
 .prettierrc
 docs
-hero.png
-rollup.config.js
-sandbox
-template
+index.html
+lib/_template
+vite.config.js
 */**/test.js
 */**/bench.js
