@@ -1,7 +1,12 @@
 .DS_Store
 node_modules
-yarn-error.log
+/dist
+.env
+.env.*
+!.env.example
+
+.vscode
+
 pnpm-lock.yaml
 package-lock.json
-sandbox/bundle.js
-.vscode
+yarn.lock
