@@ -1,4 +1,4 @@
-![Hero](https://raw.githubusercontent.com/neuekit/utilities/M2/.github/hero.svg)
+![Hero](https://raw.githubusercontent.com/neuekit/utilities/.github/hero.svg)
 
 <p align="center">
   Tree-shakeable JavaScript utilities, add yours today! 🧑‍💻
