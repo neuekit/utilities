@@ -1,3 +1,5 @@
+.prettierignore
+.prettierrc
 docs
 hero.png
 rollup.config.js

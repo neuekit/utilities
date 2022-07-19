@@ -3,7 +3,7 @@ import Benchmark from 'benchmark'
 import tristate from './index.js'
 
 /* Benchmark */
-const bench = new Benchmark.Suite
+const bench = new Benchmark.Suite()
 
 bench.add('tristate 0', () => tristate(undefined))
 bench.add('tristate -1', () => tristate(false))

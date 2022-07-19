@@ -12,20 +12,12 @@ import { query } from '../vanilla/index.js'
  * @returns {object} fetch data in json format
  */
 
-export default async function (
-   endpoint,
-   params = {},
-   preload = false,
-   api = true,
-   head = false
-) {
+export default async function (endpoint, params = {}, preload = false, api = true, head = false) {
    const base = (api && process.env.API_URL) || ''
    const url = base + endpoint + query(params, '?')
    const res = await (preload ? preload.fetch(url) : fetch(url))
    const json = await res.json()
-   const headers =
-      head &&
-      head.reduce((o, key) => ({ ...o, [key]: res.headers.get(key) }), {})
+   const headers = head && head.reduce((o, key) => ({ ...o, [key]: res.headers.get(key) }), {})
 
    return head ? { headers, json } : json
 }

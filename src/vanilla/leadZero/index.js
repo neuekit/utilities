@@ -8,5 +8,5 @@
  */
 
 export default function (number, zeros = 0) {
-   return String(number).padStart(zeros, '0');
+   return String(number).padStart(zeros, '0')
 }

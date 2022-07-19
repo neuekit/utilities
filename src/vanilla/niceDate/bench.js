@@ -7,7 +7,7 @@ import tinydate from 'tinydate'
 const str = '{YY} {MM} {DD} @ {HH}:{mm}:{ss}'
 
 /* Benchmark */
-let suite = new Benchmark.Suite
+let suite = new Benchmark.Suite()
 suite.add('niceDate', () => niceDate(str))
 suite.add('tinydate', () => tinydate(str))
 

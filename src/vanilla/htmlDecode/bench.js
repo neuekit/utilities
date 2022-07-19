@@ -3,7 +3,7 @@ import Benchmark from 'benchmark'
 import htmlDecode from './index.js'
 
 /* Setup */
-const str = '&#72;&#101;&#108;&#108;&#111;';
+const str = '&#72;&#101;&#108;&#108;&#111;'
 
 /* Benchmark */
 const bench = new Benchmark('htmlDecode', () => htmlDecode(str))

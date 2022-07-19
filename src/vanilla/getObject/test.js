@@ -4,7 +4,10 @@ import * as assert from 'uvu/assert'
 import getObject from './index.js'
 
 /* Setup */
-const arr = [{ testA: 1, testB: 2 }, { testA: 3, testB: 4 }]
+const arr = [
+   { testA: 1, testB: 2 },
+   { testA: 3, testB: 4 }
+]
 
 /* Test */
 test('getObject', () => {

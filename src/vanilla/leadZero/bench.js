@@ -3,7 +3,7 @@ import Benchmark from 'benchmark'
 import leadZero from './index.js'
 
 /* Setup */
-const number = 10;
+const number = 10
 
 /* Benchmark */
 const bench = new Benchmark('leadZero', () => leadZero(number, 4))

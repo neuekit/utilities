@@ -12,13 +12,7 @@ import { query } from '../vanilla/index.js'
  * @returns {object} fetch data in json format
  */
 
-export default async function (
-   endpoint,
-   body = {},
-   params = {},
-   preload = false,
-   api = true
-) {
+export default async function (endpoint, body = {}, params = {}, preload = false, api = true) {
    const opts = {
       method: 'POST',
       body: JSON.stringify(body),

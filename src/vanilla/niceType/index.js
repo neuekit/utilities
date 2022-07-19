@@ -8,10 +8,10 @@
  */
 
 export default function (string, format) {
-   format = format ? /(\b[a-z](?!\s))/g : /^.|(\. .)/g;
-   string = string.toLowerCase();
-   string = string.replace(/(\n)|(\f)/g, ' ');
+   format = format ? /(\b[a-z](?!\s))/g : /^.|(\. .)/g
+   string = string.toLowerCase()
+   string = string.replace(/(\n)|(\f)/g, ' ')
    string = string.replace(format, char => char.toUpperCase())
-   
-   return string;
+
+   return string
 }

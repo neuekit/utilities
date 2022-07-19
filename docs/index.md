@@ -2,66 +2,62 @@
 
 ### Table of Contents
 
--   [Integrations][1]
-    -   [analytics][2]
-        -   [Parameters][3]
-    -   [googlemaps][4]
-        -   [Parameters][5]
--   [Middleware][6]
-    -   [sanslash][7]
-        -   [Parameters][8]
--   [Svelte][9]
-    -   [env][10]
-        -   [Parameters][11]
-    -   [pull][12]
-        -   [Parameters][13]
-    -   [push][14]
-        -   [Parameters][15]
-    -   [storable][16]
-        -   [Parameters][17]
--   [Svelte][18]
-    -   [env][19]
-        -   [Parameters][20]
-    -   [pull][21]
-        -   [Parameters][22]
-    -   [push][23]
-        -   [Parameters][24]
-    -   [storable][25]
-        -   [Parameters][26]
--   [index][27]
-    -   [Parameters][28]
--   [get][29]
-    -   [Parameters][30]
--   [set][31]
-    -   [Parameters][32]
--   [unset][33]
-    -   [Parameters][34]
--   [index][35]
-    -   [Parameters][36]
--   [index][37]
-    -   [Parameters][38]
--   [index][39]
-    -   [Parameters][40]
--   [index][41]
-    -   [Parameters][42]
--   [index][43]
-    -   [Parameters][44]
--   [index][45]
-    -   [Parameters][46]
--   [index][47]
-    -   [Parameters][48]
--   [index][49]
-    -   [Parameters][50]
--   [index][51]
-    -   [Parameters][52]
--   [index][53]
-    -   [Parameters][54]
--   [index][55]
-    -   [Parameters][56]
--   [char][57]
-    -   [Parameters][58]
--   [encode][59]
-    -   [Parameters][60]
+-  [Integrations][1]
+   -  [analytics][2]
+      -  [Parameters][3]
+   -  [googlemaps][4]
+      -  [Parameters][5]
+-  [Middleware][6]
+   -  [sanslash][7]
+      -  [Parameters][8]
+-  [Svelte][9]
+   -  [pull][10]
+      -  [Parameters][11]
+   -  [push][12]
+      -  [Parameters][13]
+   -  [storable][14]
+      -  [Parameters][15]
+-  [index][16]
+   -  [Parameters][17]
+-  [index][18]
+   -  [Parameters][19]
+-  [Vanilla][20]
+   -  [get][21]
+      -  [Parameters][22]
+   -  [set][23]
+      -  [Parameters][24]
+   -  [unset][25]
+      -  [Parameters][26]
+   -  [index][27]
+      -  [Parameters][28]
+   -  [index][29]
+      -  [Parameters][30]
+   -  [index][31]
+      -  [Parameters][32]
+   -  [index][33]
+      -  [Parameters][34]
+   -  [index][35]
+      -  [Parameters][36]
+   -  [index][37]
+      -  [Parameters][38]
+   -  [index][39]
+      -  [Parameters][40]
+   -  [index][41]
+      -  [Parameters][42]
+   -  [index][43]
+      -  [Parameters][44]
+   -  [index][45]
+      -  [Parameters][46]
+   -  [index][47]
+      -  [Parameters][48]
+   -  [index][49]
+      -  [Parameters][50]
+   -  [index][51]
+      -  [Parameters][52]
+   -  [char][53]
+      -  [Parameters][54]
+   -  [encode][55]
+      -  [Parameters][56]
 
 ## Integrations
 
@@ -73,11 +69,11 @@ Initialises a minimal Google Analytics script to track traffic
 
 #### Parameters
 
--   `gaID` **[string][61]** the Google Analytics id eg. UA-123456789-1
+-  `gaID` **[string][57]** the Google Analytics id eg. UA-123456789-1
 
 **Meta**
 
--   **version**: 1.0.0
+-  **version**: 1.0.0
 
 ### googlemaps
 
@@ -85,11 +81,11 @@ Allows for programmatic insertion of Google Maps script
 
 #### Parameters
 
--   `options` **[object][62]** the Google Maps Api params (optional, default `{}`)
+-  `options` **[object][58]** the Google Maps Api params (optional, default `{}`)
 
 **Meta**
 
--   **version**: 1.1.0
+-  **version**: 1.1.0
 
 ## Middleware
 
@@ -101,31 +97,17 @@ Redirects all urls ending in a trailing slash to non trailing for SEO
 
 #### Parameters
 
--   `req` **[object][62]** request object
--   `res` **[object][62]** response object
--   `next` **[function][63]** next step function
+-  `req` **[object][58]** request object
+-  `res` **[object][58]** response object
+-  `next` **[function][59]** next step function
 
 **Meta**
 
--   **version**: 1.0.0
+-  **version**: 1.0.0
 
 ## Svelte
 
 Svelte modules
-
-### env
-
-Svelte/Sapper automatic environment variable array
-
-#### Parameters
-
--   `prefix` **[string][61]**  (optional, default `'SS_'`)
-
-Returns **[object][62]** environment variables for replacement
-
-**Meta**
-
--   **version**: 1.0.0
 
 ### pull
 
@@ -133,17 +115,17 @@ Handy sapper fetch wrapper
 
 #### Parameters
 
--   `endpoint` **[string][61]** api url
--   `params` **[object][62]** object to convert to query string (optional, default `{}`)
--   `preload` **[boolean][64]** instruction to use sappers preload fetch (optional, default `false`)
--   `api` **[boolean][64]** toggle to opt out of the prepended API_URL env var (optional, default `true`)
--   `head` **([array][65] \| [boolean][64])** include headers in return (optional, default `false`)
+-  `endpoint` **[string][57]** api url
+-  `params` **[object][58]** object to convert to query string (optional, default `{}`)
+-  `preload` **[boolean][60]** instruction to use sappers preload fetch (optional, default `false`)
+-  `api` **[boolean][60]** toggle to opt out of the prepended API_URL env var (optional, default `true`)
+-  `head` **([array][61] | [boolean][60])** include headers in return (optional, default `false`)
 
-Returns **[object][62]** fetch data in json format
+Returns **[object][58]** fetch data in json format
 
 **Meta**
 
--   **version**: 1.3.0
+-  **version**: 1.3.0
 
 ### push
 
@@ -151,17 +133,17 @@ Handy sapper fetch wrapper for post requests
 
 #### Parameters
 
--   `endpoint` **[string][61]** api url
--   `body` **[object][62]** object to convert to post body (optional, default `{}`)
--   `params` **[object][62]** object to convert to query string (optional, default `{}`)
--   `preload` **[boolean][64]** instruction to use sappers preload fetch (optional, default `false`)
--   `api` **[boolean][64]** toggle to opt out of the prepended API_URL env var (optional, default `true`)
+-  `endpoint` **[string][57]** api url
+-  `body` **[object][58]** object to convert to post body (optional, default `{}`)
+-  `params` **[object][58]** object to convert to query string (optional, default `{}`)
+-  `preload` **[boolean][60]** instruction to use sappers preload fetch (optional, default `false`)
+-  `api` **[boolean][60]** toggle to opt out of the prepended API_URL env var (optional, default `true`)
 
-Returns **[object][62]** fetch data in json format
+Returns **[object][58]** fetch data in json format
 
 **Meta**
 
--   **version**: 1.0.0
+-  **version**: 1.0.0
 
 ### storable
 
@@ -169,81 +151,14 @@ Svelte store which reads/writes values to the users localStorage
 
 #### Parameters
 
--   `data` **any** data to create store with
+-  `data` **any** data to create store with
+-  `name` **[string][57]** name of localStorage key (optional, default `'storable'`)
 
-Returns **[object][62]** store methods
-
-**Meta**
-
--   **version**: 1.0.0
-
-## Svelte
-
-Svelte modules
-
-### env
-
-Svelte/Sapper automatic environment variable array
-
-#### Parameters
-
--   `prefix` **[string][61]**  (optional, default `'SS_'`)
-
-Returns **[object][62]** environment variables for replacement
+Returns **[object][58]** store methods
 
 **Meta**
 
--   **version**: 1.0.0
-
-### pull
-
-Handy sapper fetch wrapper
-
-#### Parameters
-
--   `endpoint` **[string][61]** api url
--   `params` **[object][62]** object to convert to query string (optional, default `{}`)
--   `preload` **[boolean][64]** instruction to use sappers preload fetch (optional, default `false`)
--   `api` **[boolean][64]** toggle to opt out of the prepended API_URL env var (optional, default `true`)
--   `head` **([array][65] \| [boolean][64])** include headers in return (optional, default `false`)
-
-Returns **[object][62]** fetch data in json format
-
-**Meta**
-
--   **version**: 1.3.0
-
-### push
-
-Handy sapper fetch wrapper for post requests
-
-#### Parameters
-
--   `endpoint` **[string][61]** api url
--   `body` **[object][62]** object to convert to post body (optional, default `{}`)
--   `params` **[object][62]** object to convert to query string (optional, default `{}`)
--   `preload` **[boolean][64]** instruction to use sappers preload fetch (optional, default `false`)
--   `api` **[boolean][64]** toggle to opt out of the prepended API_URL env var (optional, default `true`)
-
-Returns **[object][62]** fetch data in json format
-
-**Meta**
-
--   **version**: 1.0.0
-
-### storable
-
-Svelte store which reads/writes values to the users localStorage
-
-#### Parameters
-
--   `data` **any** data to create store with
-
-Returns **[object][62]** store methods
-
-**Meta**
-
--   **version**: 1.0.0
+-  **version**: 1.0.0
 
 ## index
 
@@ -251,388 +166,367 @@ Returns a clamped value between two points
 
 ### Parameters
 
--   `start` **[number][66]** bottom end of the range
--   `end` **[number][66]** top end of the range
--   `duration` **[number][66]** length of range
--   `multiplier` **[number][66]** changing value to move between start and end
--   `decimal` **[number][66]** return result to a float
+-  `start` **[number][62]** bottom end of the range
+-  `end` **[number][62]** top end of the range
+-  `duration` **[number][62]** length of range
+-  `multiplier` **[number][62]** changing value to move between start and end
+-  `decimal` **[number][62]** return result to a float
 
-Returns **[number][66]** Returns the value between start & end
+Returns **[number][62]** Returns the value between start & end
 
 **Meta**
 
--   **version**: 1.0.0
+-  **version**: 1.0.0
 
-## get
+## index
+
+Returns a tristate value.
+
+### Parameters
+
+-  `val`
+
+Returns **([boolean][60] | [undefined][63])** Returns 1, 0 or -1
+
+**Meta**
+
+-  **version**: 1.0.0
+
+## Vanilla
+
+Vanilla modules
+
+### get
 
 Get a cookie stored in the browser by name
 
-### Parameters
+#### Parameters
 
--   `name`  
--   `cookie` **[string][61]** name
+-  `name`
+-  `cookie` **[string][57]** name
 
-Returns **[string][61]** Cookie value
+Returns **[string][57]** Cookie value
 
 **Meta**
 
--   **version**: 1.0.0
+-  **version**: 1.0.0
 
-## set
+### set
 
 Sets a cookie
 
-### Parameters
+#### Parameters
 
--   `name`  
--   `value`  
--   `days` **[string][61]** until expiry
--   `cookie` **[string][61]** name
--   `cookie` **[string][61]** value
+-  `name`
+-  `value`
+-  `days` **[string][57]** until expiry
+-  `cookie` **[string][57]** name
+-  `cookie` **[string][57]** value
 
 **Meta**
 
--   **version**: 1.0.0
+-  **version**: 1.0.0
 
-## unset
+### unset
 
 Removes a cookie from the browser by name
 
-### Parameters
+#### Parameters
 
--   `name`  
--   `cookie` **[string][61]** name
+-  `name`
+-  `cookie` **[string][57]** name
 
 **Meta**
 
--   **version**: 1.0.0
+-  **version**: 1.0.0
 
-## index
+### index
 
 Copies text to the users' clipboard
 
-### Parameters
+#### Parameters
 
--   `text` **[string][61]** the string to be copied
+-  `text` **[string][57]** the string to be copied
 
 **Meta**
 
--   **version**: 1.0.0
+-  **version**: 1.0.0
 
-## index
+### index
 
 Creates an element with a given object of attributes
 
-### Parameters
+#### Parameters
 
--   `tagName`  
--   `attributes`   (optional, default `{}`)
--   `name` **[string][61]** of the element such as 'div'
--   `key/value` **[object][62]** object of attribute names and values
+-  `tagName`
+-  `attributes` (optional, default `{}`)
+-  `name` **[string][57]** of the element such as 'div'
+-  `key/value` **[object][58]** object of attribute names and values
 
-Returns **[node][67]** returns node
+Returns **[node][64]** returns node
 
 **Meta**
 
--   **version**: 1.0.0
+-  **version**: 1.0.0
 
-## index
+### index
 
 Finds an object index in an array of objects
 
-### Parameters
+#### Parameters
 
--   `arr` **[array][65]** the array of objects to search through
--   `key` **[string][61]** the property key in the object you want to find
--   `value` **[string][61]** the property value in the object you want to find
+-  `arr` **[array][61]** the array of objects to search through
+-  `key` **[string][57]** the property key in the object you want to find
+-  `value` **[string][57]** the property value in the object you want to find
 
-Returns **[number][66]** index of the object that matches the criteria, -1 otherwise
+Returns **[number][62]** index of the object that matches the criteria, -1 otherwise
 
 **Meta**
 
--   **version**: 1.0.0
+-  **version**: 1.0.0
 
-## index
+### index
 
 Finds an object in an array of objects
 
-### Parameters
+#### Parameters
 
--   `arr` **[array][65]** the array of objects to search through
--   `key` **[string][61]** the property key in the object you want to find
--   `value` **[string][61]** the property value in the object you want to find
+-  `arr` **[array][61]** the array of objects to search through
+-  `key` **[string][57]** the property key in the object you want to find
+-  `value` **[string][57]** the property value in the object you want to find
 
-Returns **[number][66]** the object that matches the criteria, undefined otherwise
+Returns **[number][62]** the object that matches the criteria, undefined otherwise
 
 **Meta**
 
--   **version**: 1.0.0
+-  **version**: 1.0.0
 
-## index
+### index
 
 Decodes a numeric html entity such as J
 
-### Parameters
+#### Parameters
 
--   `str` **[string][61]** the string to be decoded
+-  `str` **[string][57]** the string to be decoded
 
-Returns **[string][61]** plain text string
+Returns **[string][57]** plain text string
 
 **Meta**
 
--   **version**: 1.0.0
+-  **version**: 1.0.0
 
-## index
+### index
 
 Constructs an IntersectionObserver based, image lazy load function
 
-### Parameters
+#### Parameters
 
--   `node` **[object][62]** the element to be observed/lazy loaded
+-  `node` **[object][58]** the element to be observed/lazy loaded
 
-Returns **[object][62]** containing methods, update and destroy
+Returns **[object][58]** containing methods, update and destroy
 
 **Meta**
 
--   **version**: 1.0.0
+-  **version**: 1.0.0
 
-## index
+### index
 
 Adds leading zeros to your number
 
-### Parameters
+#### Parameters
 
--   `number` **[number][66]** The number to prefix with zeros
--   `zeros` **[number][66]** The number of zeros to lead by (optional, default `0`)
+-  `number` **[number][62]** The number to prefix with zeros
+-  `zeros` **[number][62]** The number of zeros to lead by (optional, default `0`)
 
-Returns **[string][61]** number entered preceded by the number of zeroes
+Returns **[string][57]** number entered preceded by the number of zeroes
 
 **Meta**
 
--   **version**: 2.0.0
+-  **version**: 2.0.0
 
-## index
+### index
 
 Does a rudimentary check of download speed
 
-### Parameters
+#### Parameters
 
--   `size`   (optional, default `100000`)
+-  `size` (optional, default `100000`)
 
-Returns **[number][66]** Filesize in bytes
+Returns **[number][62]** Filesize in bytes
 
 **Meta**
 
--   **version**: 1.0.0
+-  **version**: 1.0.0
 
-## index
+### index
 
 Creates a nice formatted date from a unix timestamp
 
-### Parameters
+#### Parameters
 
--   `str`  
--   `date` **([object][62] \| [string][61])** object or string
--   `string` **[string][61]** containing formats ie. {YYYY}
+-  `str`
+-  `date` **([object][58] | [string][57])** object or string
+-  `string` **[string][57]** containing formats ie. {YYYY}
 
-Returns **[string][61]** 6 character hex string
-
-**Meta**
-
--   **version**: 2.0.0
-
-## index
-
-Creates a nice formatted time from n integer of minutes
-
-### Parameters
-
--   `mins` **[number][66]** minutes integer
-
-Returns **[string][61]** nicely formatted time string eg. 7h 14m
+Returns **[string][57]** 6 character hex string
 
 **Meta**
 
--   **version**: 1.0.0
+-  **version**: 2.0.0
 
-## index
+### index
+
+Creates a nice formatted time from an integer of minutes
+
+#### Parameters
+
+-  `mins` **[number][62]** minutes integer
+
+Returns **[string][57]** nicely formatted time string eg. 7h 14m
+
+**Meta**
+
+-  **version**: 1.0.0
+
+### index
 
 Takes a string and converts it to sentence or title case
 
-### Parameters
+#### Parameters
 
--   `string` **[string][61]** string to convert
--   `format` **[boolean][64]** enable title case
+-  `string` **[string][57]** string to convert
+-  `format` **[boolean][60]** enable title case
 
-Returns **[string][61]** converted string
+Returns **[string][57]** converted string
 
 **Meta**
 
--   **version**: 2.0.0
+-  **version**: 2.0.0
 
-## char
+### index
+
+Overscroll detection and callback firing
+
+#### Parameters
+
+-  `callback` **[function][59]**
+-  `edge` (optional, default `'bottom'`)
+
+Returns **[function][59]** Fires callback
+
+**Meta**
+
+-  **version**: 1.0.0
+
+### index
+
+Converts a file to base64
+
+#### Parameters
+
+-  `file` **[blob][65]** file blob
+
+Returns **[string][57]** base64 string
+
+**Meta**
+
+-  **version**: 1.0.0
+
+### char
 
 Creates a unique id
 
-Type: [string][61]
+Type: [string][57]
 
-### Parameters
+#### Parameters
 
--   `length` **[number][66]** of id to create
+-  `length` **[number][62]** of id to create
 
-Returns **[string][61]** unique id as an alphanumeric string
-
-**Meta**
-
--   **version**: 2.0.0
-
-## encode
-
-Converts and object to a url query string or vice-versa
-
-### Parameters
-
--   `obj`  
--   `pfx`  
--   `object` **([object][62] \| [string][61])** to encode or string to decode
--   `prefix` **[string][61]** for encoded string
-
-Returns **([object][62] \| [string][61])** returns encoded string or decoded object
+Returns **[string][57]** unique id as an alphanumeric string
 
 **Meta**
 
--   **version**: 1.0.0
+-  **version**: 2.0.0
+
+### encode
+
+Converts an object to a url query string or vice-versa
+
+#### Parameters
+
+-  `obj`
+-  `pfx`
+-  `object` **([object][58] | [string][57])** to encode or string to decode
+-  `prefix` **[string][57]** for encoded string
+
+Returns **([object][58] | [string][57])** returns encoded string or decoded object
+
+**Meta**
+
+-  **version**: 1.0.0
 
 [1]: #integrations
-
 [2]: #analytics
-
 [3]: #parameters
-
 [4]: #googlemaps
-
 [5]: #parameters-1
-
 [6]: #middleware
-
 [7]: #sanslash
-
 [8]: #parameters-2
-
 [9]: #svelte
-
-[10]: #env
-
+[10]: #pull
 [11]: #parameters-3
-
-[12]: #pull
-
+[12]: #push
 [13]: #parameters-4
-
-[14]: #push
-
+[14]: #storable
 [15]: #parameters-5
-
-[16]: #storable
-
+[16]: #index
 [17]: #parameters-6
-
-[18]: #svelte-1
-
-[19]: #env-1
-
-[20]: #parameters-7
-
-[21]: #pull-1
-
+[18]: #index-1
+[19]: #parameters-7
+[20]: #vanilla
+[21]: #get
 [22]: #parameters-8
-
-[23]: #push-1
-
+[23]: #set
 [24]: #parameters-9
-
-[25]: #storable-1
-
+[25]: #unset
 [26]: #parameters-10
-
-[27]: #index
-
+[27]: #index-2
 [28]: #parameters-11
-
-[29]: #get
-
+[29]: #index-3
 [30]: #parameters-12
-
-[31]: #set
-
+[31]: #index-4
 [32]: #parameters-13
-
-[33]: #unset
-
+[33]: #index-5
 [34]: #parameters-14
-
-[35]: #index-1
-
+[35]: #index-6
 [36]: #parameters-15
-
-[37]: #index-2
-
+[37]: #index-7
 [38]: #parameters-16
-
-[39]: #index-3
-
+[39]: #index-8
 [40]: #parameters-17
-
-[41]: #index-4
-
+[41]: #index-9
 [42]: #parameters-18
-
-[43]: #index-5
-
+[43]: #index-10
 [44]: #parameters-19
-
-[45]: #index-6
-
+[45]: #index-11
 [46]: #parameters-20
-
-[47]: #index-7
-
+[47]: #index-12
 [48]: #parameters-21
-
-[49]: #index-8
-
+[49]: #index-13
 [50]: #parameters-22
-
-[51]: #index-9
-
+[51]: #index-14
 [52]: #parameters-23
-
-[53]: #index-10
-
+[53]: #char
 [54]: #parameters-24
-
-[55]: #index-11
-
+[55]: #encode
 [56]: #parameters-25
-
-[57]: #char
-
-[58]: #parameters-26
-
-[59]: #encode
-
-[60]: #parameters-27
-
-[61]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String
-
-[62]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object
-
-[63]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function
-
-[64]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean
-
-[65]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array
-
-[66]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number
-
-[67]: https://developer.mozilla.org/docs/Web/API/Node/nextSibling
+[57]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String
+[58]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object
+[59]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function
+[60]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean
+[61]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array
+[62]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number
+[63]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/undefined
+[64]: https://developer.mozilla.org/docs/Web/API/Node/nextSibling
+[65]: https://developer.mozilla.org/docs/Web/API/Blob

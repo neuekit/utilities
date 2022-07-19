@@ -3,7 +3,7 @@ import Benchmark from 'benchmark'
 import niceTime from './index.js'
 
 /* Setup */
-const mins = 90;
+const mins = 90
 
 /* Benchmark */
 const bench = new Benchmark('niceTime', () => niceTime(mins))
