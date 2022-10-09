@@ -11,11 +11,7 @@
 </a>
 
 <a href="https://github.com/neuekit/utilities/actions">
-<img src="https://img.shields.io/github/workflow/status/neuekit/utilities/test-coverage-ci" alt="CI" />
-</a>
-
-<a href="https://codecov.io/gh/neuekit/utilities">
-<img src="https://img.shields.io/codecov/c/github/neuekit/utilites" alt="codecov" />
+<img src="https://github.com/neuekit/utilities/actions/workflows/main.yml/badge.svg" alt="CI" />
 </a>
 
 The purpose of this repo is to create a single point of access for all those little helpers, tools and utilities that you have on all your projects.
