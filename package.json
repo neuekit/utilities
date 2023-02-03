@@ -1,9 +1,13 @@
 {
    "name": "@neuekit/utils",
-   "version": "2.2.1",
+   "version": "2.2.2",
    "license": "MIT",
    "description": "Tree-shakeable JavaScript utilities, add yours today!",
    "author": "Matt Pilott && Darby Manning",
+   "contributors": [
+      "Matt Pilott <hello@matt-pilott.com>",
+      "Darby Manning <me@darbymanning.com>"
+   ],
    "homepage": "https://github.com/neuekit/utilities#readme",
    "repository": {
       "type": "git",
