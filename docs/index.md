@@ -61,12 +61,16 @@
         *   [Parameters][57]
 *   [index][58]
     *   [Parameters][59]
+*   [Vite][60]
+    *   [reloadForFiles][61]
+        *   [Parameters][62]
+        *   [Examples][63]
 
 ## index
 
 Put your description here
 
-Returns **[number][60]** Put your return description here
+Returns **[number][64]** Put your return description here
 
 **Meta**
 
@@ -82,7 +86,7 @@ Initialises a minimal Google Analytics script to track traffic
 
 #### Parameters
 
-*   `gaID` **[string][61]** the Google Analytics id eg. UA-123456789-1
+*   `gaID` **[string][65]** the Google Analytics id eg. UA-123456789-1
 
 **Meta**
 
@@ -94,7 +98,7 @@ Allows for programmatic insertion of Google Maps script
 
 #### Parameters
 
-*   `options` **[object][62]** the Google Maps Api params (optional, default `{}`)
+*   `options` **[object][66]** the Google Maps Api params (optional, default `{}`)
 
 **Meta**
 
@@ -110,9 +114,9 @@ Redirects all urls ending in a trailing slash to non trailing for SEO
 
 #### Parameters
 
-*   `req` **[object][62]** request object
-*   `res` **[object][62]** response object
-*   `next` **[function][63]** next step function
+*   `req` **[object][66]** request object
+*   `res` **[object][66]** response object
+*   `next` **[function][67]** next step function
 
 **Meta**
 
@@ -128,13 +132,13 @@ Action to click outside
 
 #### Parameters
 
-*   `node` **[object][62]** The node to listen to
-*   `params` **[array][64]** Callback and elements to exclude from the click
+*   `node` **[object][66]** The node to listen to
+*   `params` **[array][68]** Callback and elements to exclude from the click
 
     *   `params.0` &#x20;
     *   `params.exclude` **...any**&#x20;
 
-Returns **[function][63]** The passed in callback
+Returns **[function][67]** The passed in callback
 
 **Meta**
 
@@ -146,13 +150,13 @@ Handy sveltekit fetch wrapper
 
 #### Parameters
 
-*   `endpoint` **[string][61]** api url
-*   `params` **[object][62]** object to convert to query string (optional, default `{}`)
-*   `preload` **[boolean][65]** instruction to use sappers preload fetch (optional, default `false`)
-*   `api` **[boolean][65]** toggle to opt out of the prepended API\_URL env var (optional, default `true`)
-*   `head` **([array][64] | [boolean][65])** include headers in return (optional, default `false`)
+*   `endpoint` **[string][65]** api url
+*   `params` **[object][66]** object to convert to query string (optional, default `{}`)
+*   `preload` **[boolean][69]** instruction to use sappers preload fetch (optional, default `false`)
+*   `api` **[boolean][69]** toggle to opt out of the prepended API\_URL env var (optional, default `true`)
+*   `head` **([array][68] | [boolean][69])** include headers in return (optional, default `false`)
 
-Returns **[object][62]** fetch data in json format
+Returns **[object][66]** fetch data in json format
 
 **Meta**
 
@@ -164,13 +168,13 @@ Handy sveltekit fetch wrapper for post requests
 
 #### Parameters
 
-*   `endpoint` **[string][61]** api url
-*   `body` **[object][62]** object to convert to post body (optional, default `{}`)
-*   `params` **[object][62]** object to convert to query string (optional, default `{}`)
-*   `preload` **[boolean][65]** instruction to use sappers preload fetch (optional, default `false`)
-*   `api` **[boolean][65]** toggle to opt out of the prepended API\_URL env var (optional, default `true`)
+*   `endpoint` **[string][65]** api url
+*   `body` **[object][66]** object to convert to post body (optional, default `{}`)
+*   `params` **[object][66]** object to convert to query string (optional, default `{}`)
+*   `preload` **[boolean][69]** instruction to use sappers preload fetch (optional, default `false`)
+*   `api` **[boolean][69]** toggle to opt out of the prepended API\_URL env var (optional, default `true`)
 
-Returns **[object][62]** fetch data in json format
+Returns **[object][66]** fetch data in json format
 
 **Meta**
 
@@ -183,9 +187,9 @@ Svelte store which reads/writes values to the users localStorage
 #### Parameters
 
 *   `data` **any** data to create store with
-*   `name` **[string][61]** name of localStorage key (optional, default `'storable'`)
+*   `name` **[string][65]** name of localStorage key (optional, default `'storable'`)
 
-Returns **[object][62]** store methods
+Returns **[object][66]** store methods
 
 **Meta**
 
@@ -197,13 +201,13 @@ Returns a clamped value between two points
 
 ### Parameters
 
-*   `start` **[number][60]** bottom end of the range
-*   `end` **[number][60]** top end of the range
-*   `duration` **[number][60]** length of range
-*   `multiplier` **[number][60]** changing value to move between start and end
-*   `decimal` **[number][60]** return result to a float
+*   `start` **[number][64]** bottom end of the range
+*   `end` **[number][64]** top end of the range
+*   `duration` **[number][64]** length of range
+*   `multiplier` **[number][64]** changing value to move between start and end
+*   `decimal` **[number][64]** return result to a float
 
-Returns **[number][60]** Returns the value between start & end
+Returns **[number][64]** Returns the value between start & end
 
 **Meta**
 
@@ -234,9 +238,9 @@ Get a cookie stored in the browser by name
 #### Parameters
 
 *   `name` &#x20;
-*   `cookie` **[string][61]** name
+*   `cookie` **[string][65]** name
 
-Returns **[string][61]** Cookie value
+Returns **[string][65]** Cookie value
 
 **Meta**
 
@@ -250,9 +254,9 @@ Sets a cookie
 
 *   `name` &#x20;
 *   `value` &#x20;
-*   `days` **[string][61]** until expiry
-*   `cookie` **[string][61]** name
-*   `cookie` **[string][61]** value
+*   `days` **[string][65]** until expiry
+*   `cookie` **[string][65]** name
+*   `cookie` **[string][65]** value
 
 **Meta**
 
@@ -265,7 +269,7 @@ Removes a cookie from the browser by name
 #### Parameters
 
 *   `name` &#x20;
-*   `cookie` **[string][61]** name
+*   `cookie` **[string][65]** name
 
 **Meta**
 
@@ -277,7 +281,7 @@ Copies text to the users' clipboard
 
 #### Parameters
 
-*   `text` **[string][61]** the string to be copied
+*   `text` **[string][65]** the string to be copied
 
 **Meta**
 
@@ -292,10 +296,10 @@ Creates an element with a given object of attributes
 
 *   `tagName` &#x20;
 *   `attributes`   (optional, default `{}`)
-*   `name` **[string][61]** of the element such as 'div'
-*   `key/value` **[object][62]** object of attribute names and values
+*   `name` **[string][65]** of the element such as 'div'
+*   `key/value` **[object][66]** object of attribute names and values
 
-Returns **[node][66]** returns node
+Returns **[node][70]** returns node
 
 **Meta**
 
@@ -307,11 +311,11 @@ Finds an object index in an array of objects
 
 #### Parameters
 
-*   `arr` **[array][64]** the array of objects to search through
-*   `key` **[string][61]** the property key in the object you want to find
-*   `value` **[string][61]** the property value in the object you want to find
+*   `arr` **[array][68]** the array of objects to search through
+*   `key` **[string][65]** the property key in the object you want to find
+*   `value` **[string][65]** the property value in the object you want to find
 
-Returns **[number][60]** index of the object that matches the criteria, -1 otherwise
+Returns **[number][64]** index of the object that matches the criteria, -1 otherwise
 
 **Meta**
 
@@ -323,11 +327,11 @@ Finds an object in an array of objects
 
 #### Parameters
 
-*   `arr` **[array][64]** the array of objects to search through
-*   `key` **[string][61]** the property key in the object you want to find
-*   `value` **[string][61]** the property value in the object you want to find
+*   `arr` **[array][68]** the array of objects to search through
+*   `key` **[string][65]** the property key in the object you want to find
+*   `value` **[string][65]** the property value in the object you want to find
 
-Returns **[number][60]** the object that matches the criteria, undefined otherwise
+Returns **[number][64]** the object that matches the criteria, undefined otherwise
 
 **Meta**
 
@@ -339,9 +343,9 @@ Decodes a numeric html entity such as J
 
 #### Parameters
 
-*   `str` **[string][61]** the string to be decoded
+*   `str` **[string][65]** the string to be decoded
 
-Returns **[string][61]** plain text string
+Returns **[string][65]** plain text string
 
 **Meta**
 
@@ -353,9 +357,9 @@ Constructs an IntersectionObserver based, image lazy load function
 
 #### Parameters
 
-*   `node` **[object][62]** the element to be observed/lazy loaded
+*   `node` **[object][66]** the element to be observed/lazy loaded
 
-Returns **[object][62]** containing methods, update and destroy
+Returns **[object][66]** containing methods, update and destroy
 
 **Meta**
 
@@ -367,10 +371,10 @@ Adds leading zeros to your number
 
 #### Parameters
 
-*   `number` **[number][60]** The number to prefix with zeros
-*   `zeros` **[number][60]** The number of zeros to lead by (optional, default `0`)
+*   `number` **[number][64]** The number to prefix with zeros
+*   `zeros` **[number][64]** The number of zeros to lead by (optional, default `0`)
 
-Returns **[string][61]** number entered preceded by the number of zeroes
+Returns **[string][65]** number entered preceded by the number of zeroes
 
 **Meta**
 
@@ -384,7 +388,7 @@ Does a rudimentary check of download speed
 
 *   `size`   (optional, default `100000`)
 
-Returns **[number][60]** Filesize in bytes
+Returns **[number][64]** Filesize in bytes
 
 **Meta**
 
@@ -397,10 +401,10 @@ Creates a nice formatted date from a unix timestamp
 #### Parameters
 
 *   `str` &#x20;
-*   `date` **([object][62] | [string][61])** object or string
-*   `string` **[string][61]** containing formats ie. {YYYY}
+*   `date` **([object][66] | [string][65])** object or string
+*   `string` **[string][65]** containing formats ie. {YYYY}
 
-Returns **[string][61]** 6 character hex string
+Returns **[string][65]** 6 character hex string
 
 **Meta**
 
@@ -412,9 +416,9 @@ Creates a nice formatted time from an integer of minutes
 
 #### Parameters
 
-*   `mins` **[number][60]** minutes integer
+*   `mins` **[number][64]** minutes integer
 
-Returns **[string][61]** nicely formatted time string eg. 7h 14m
+Returns **[string][65]** nicely formatted time string eg. 7h 14m
 
 **Meta**
 
@@ -426,10 +430,10 @@ Takes a string and converts it to sentence or title case
 
 #### Parameters
 
-*   `string` **[string][61]** string to convert
-*   `format` **[boolean][65]** enable title case
+*   `string` **[string][65]** string to convert
+*   `format` **[boolean][69]** enable title case
 
-Returns **[string][61]** converted string
+Returns **[string][65]** converted string
 
 **Meta**
 
@@ -441,9 +445,9 @@ Converts a file to base64
 
 #### Parameters
 
-*   `file` **[blob][67]** file blob
+*   `file` **[blob][71]** file blob
 
-Returns **[string][61]** base64 string
+Returns **[string][65]** base64 string
 
 **Meta**
 
@@ -453,13 +457,13 @@ Returns **[string][61]** base64 string
 
 Creates a unique id
 
-Type: [string][61]
+Type: [string][65]
 
 #### Parameters
 
-*   `length` **[number][60]** of id to create
+*   `length` **[number][64]** of id to create
 
-Returns **[string][61]** unique id as an alphanumeric string
+Returns **[string][65]** unique id as an alphanumeric string
 
 **Meta**
 
@@ -473,10 +477,10 @@ Converts an object to a url query string or vice-versa
 
 *   `obj` &#x20;
 *   `pfx` &#x20;
-*   `object` **([object][62] | [string][61])** to encode or string to decode
-*   `prefix` **[string][61]** for encoded string
+*   `object` **([object][66] | [string][65])** to encode or string to decode
+*   `prefix` **[string][65]** for encoded string
 
-Returns **([object][62] | [string][61])** returns encoded string or decoded object
+Returns **([object][66] | [string][65])** returns encoded string or decoded object
 
 **Meta**
 
@@ -490,11 +494,54 @@ Creates a nice string that shows the time since the passed in date
 
 *   `dateParam` &#x20;
 
-Returns **[string][61]** formatted time/date string Yesterday at 10:20
+Returns **[string][65]** formatted time/date string Yesterday at 10:20
 
 **Meta**
 
 *   **version**: 1.0.0
+
+## Vite
+
+Vite modules
+
+### reloadForFiles
+
+#### Parameters
+
+*   `files` **[Array][68]<[String][65]>** The file to watch for changes. Can be a string or an array of strings.
+
+#### Examples
+
+```javascript
+// vite.config.js
+import { reloadForFiles } from '@neuekit/utils'
+
+export default {
+  plugins: [
+    reloadForFiles('src/functions/my-function.js')
+  ]
+}
+```
+
+```javascript
+// vite.config.js
+import { reloadForFiles } from '@neuekit/utils'
+
+export default {
+  plugins: [
+    reloadForFiles(['.ts', '.js'])
+  ]
+}
+```
+
+Returns **any** The plugin.
+
+**Meta**
+
+*   **version**: 1.0.0
+    This plugin will reload the page when a file is changed.
+    This is useful for files that are not imported by the app.
+    For example, if you have a file that is used by a serverless function.
 
 [1]: #index
 
@@ -614,18 +661,26 @@ Returns **[string][61]** formatted time/date string Yesterday at 10:20
 
 [59]: #parameters-26
 
-[60]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number
+[60]: #vite
 
-[61]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String
+[61]: #reloadforfiles
 
-[62]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object
+[62]: #parameters-27
 
-[63]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function
+[63]: #examples
 
-[64]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array
+[64]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number
 
-[65]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean
+[65]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String
 
-[66]: https://developer.mozilla.org/docs/Web/API/Node/nextSibling
+[66]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object
 
-[67]: https://developer.mozilla.org/docs/Web/API/Blob
+[67]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function
+
+[68]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array
+
+[69]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean
+
+[70]: https://developer.mozilla.org/docs/Web/API/Node/nextSibling
+
+[71]: https://developer.mozilla.org/docs/Web/API/Blob
