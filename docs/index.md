@@ -79,7 +79,8 @@
 *   `params` **[object][67]** object to convert to query string (optional, default `{}`)
 *   `preload` **[boolean][70]** instruction to use sappers preload fetch (optional, default `false`)
 *   `api` **[boolean][70]** toggle to opt out of the prepended API\_URL env var (optional, default `true`)Returns **[object][67]** fetch data in json format**Meta***   **version**: 1.0.0### storableSvelte store which reads/writes values to the users localStorage#### Parameters*   `data` **any** data to create store with
-*   `name` **[string][66]** name of localStorage key (optional, default `'storable'`)Returns **[object][67]** store methods**Meta***   **version**: 1.0.0## indexReturns a clamped value between two points### Parameters*   `start` **[number][71]** bottom end of the range
+*   `name` **[string][66]** name of localStorage key (optional, default `'storable'`)
+*   `session` **[boolean][70]** use sessionStorage instead of localStorageReturns **[object][67]** store methods**Meta***   **version**: 2.0.0## indexReturns a clamped value between two points### Parameters*   `start` **[number][71]** bottom end of the range
 *   `end` **[number][71]** top end of the range
 *   `duration` **[number][71]** length of range
 *   `multiplier` **[number][71]** changing value to move between start and end
