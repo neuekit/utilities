@@ -27,3 +27,5 @@ The aim with this approach is to have small files that do one thing well.
 #### Open to contributions, ideas and feedback, oh plus bugs of course 🤓
 
 [Documentation available here](https://neuekit.github.io/utilities/index.html)
+
+![Alt](https://repobeats.axiom.co/api/embed/dff5b0ba9f0da76ccc2a8349f39eec1c743b42f7.svg "Repobeats analytics image")
